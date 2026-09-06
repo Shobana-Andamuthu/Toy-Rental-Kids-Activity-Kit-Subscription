@@ -1,0 +1,315 @@
+/* ==========================================================================
+   responsive.css — JoyLoop Comprehensive Responsive Overrides
+   Breakpoints: 1400, 1200, 992, 768, 575, 480, 375
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   Desktop Unified Container (Navbar & Contents Aligned at 1160px)
+   ----------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl,
+  .nav-shell {
+    max-width: 1160px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Tablet Large (≤ 1199px, ≥ 992px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .section-padding { padding: 5rem 0; }
+  .section-title h2 { font-size: 2.1rem; }
+}
+
+/* -----------------------------------------------------------------------
+   Tablet (≤ 991px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root {
+    --nav-height: 72px;
+    --nav-height-scrolled: 64px;
+  }
+
+  .nav-shell { padding: 0 20px; }
+
+  .navbar-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-padding { padding: 4rem 0; }
+  .section-title h2 { font-size: 2rem; }
+
+  /* Prevent any section from overflowing */
+  .hero-section,
+  .home-2-hero,
+  .how-works-hero,
+  .catalog-hero,
+  .about-hero,
+  .contact-hero,
+  .plans-hero,
+  .hygiene-hero,
+  .faq-hero,
+  .product-hero {
+    overflow-x: hidden;
+  }
+
+  /* Hide background decorative letters/watermarks that obscure hero text */
+  .contact-page .contact-hero::after,
+  .faq-page .faq-hero::after,
+  .plans-page .plans-hero::after,
+  .how-page .how-hero::after {
+    display: none !important;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Mobile Landscape / Small Tablet (≤ 767px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .nav-shell { padding: 0 16px; }
+
+  /* Footer */
+  .footer-widget { margin-bottom: 2.5rem; }
+  .footer-bottom { margin-top: 2rem; }
+
+  /* Catalog grid: 2 columns on mobile */
+  .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Hero sections: tighten padding */
+  .hero-section { padding: 3.5rem 0 2.5rem; }
+  .home-2-hero { padding: 4rem 0 3rem; }
+
+  /* Age explorer nav: wrap pills */
+  .age-explorer-nav { flex-wrap: wrap; gap: .5rem; }
+  .age-explorer-nav .nav-link { padding: .45rem .9rem; font-size: .85rem; }
+
+  /* Lookbook/collection tabs */
+  .collection-tabs { flex-wrap: wrap; gap: .5rem; }
+
+  /* Pricing cards: full width */
+  .plan-card { max-width: 420px; margin-left: auto; margin-right: auto; }
+
+  /* Timeline / how-it-works horizontal connector: hide */
+  .timeline-connector { display: none; }
+
+  /* About collage */
+  .about-collage-wrap { max-height: 280px; }
+
+  /* Product page breadcrumb */
+  .product-breadcrumb { font-size: .82rem; }
+
+  /* Auth page: single column */
+  .auth-split-layout { flex-direction: column; }
+  .auth-image-panel { min-height: 200px; }
+}
+
+/* -----------------------------------------------------------------------
+   Mobile (≤ 575px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 575px) {
+  /* Brand */
+  .navbar-brand { font-size: 1.35rem; }
+
+  /* Catalog grid: single column */
+  .catalog-grid { grid-template-columns: 1fr !important; }
+
+  /* Product hero */
+  .product-page .product-hero { background: none; }
+  .product-page .product-hero .product-gallery { margin-bottom: 1.5rem; }
+
+  /* Product Details Mobile 2x2 Grid & Full-Width Actions */
+  .product-actions-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+  .product-actions-wrap .btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .product-highlights-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+  }
+  .product-highlights-row > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    margin-bottom: 8px !important;
+  }
+  .product-highlight-card {
+    padding: 0.75rem 0.5rem !important;
+    min-height: 88px;
+    border-radius: 12px !important;
+  }
+  .product-highlight-card i {
+    font-size: 1.4rem !important;
+    margin-bottom: 2px !important;
+  }
+  .product-highlight-card small.fw-bold {
+    font-size: 0.82rem !important;
+    line-height: 1.2;
+  }
+  .product-highlight-card small.text-muted {
+    font-size: 0.72rem !important;
+    line-height: 1.2;
+  }
+
+  /* Home 2 bento items: single column */
+  .bento-grid { grid-template-columns: 1fr !important; }
+  .bento-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+
+  /* Hygiene steps: single column */
+  .hygiene-steps-grid { grid-template-columns: 1fr !important; }
+
+  /* How it works: single column */
+  .how-works-steps { grid-template-columns: 1fr !important; }
+
+  /* Hero text sizing */
+  .hero-section .display-4,
+  .home-2-hero .display-4 { font-size: 2rem; }
+
+  /* Section title */
+  .section-title h2 { font-size: 1.75rem; }
+
+  /* Buttons: full width in hero areas */
+  .hero-section .hero-cta-row { flex-direction: column; gap: .75rem; }
+  .hero-section .hero-cta-row .btn { width: 100%; }
+
+  /* Plans page: full-width cards */
+  .plans-section .row > [class^="col"] { max-width: 100%; }
+
+  /* Dashboard content cards: single column metrics */
+  .dash-main .row.g-4 > .col-md-6,
+  .dash-main .row.g-4 > .col-xl-3 { flex: 0 0 100%; max-width: 100%; }
+
+  /* Home 2 Invitation Banner */
+  .h2-cta-banner {
+    padding: 2.25rem 1rem !important;
+    border-radius: 22px !important;
+  }
+  .h2-cta-banner h2 {
+    font-size: clamp(1.5rem, 5.5vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+  }
+  .h2-cta-badge {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    gap: 0.15rem;
+    white-space: normal !important;
+    max-width: calc(100% - 10px) !important;
+    font-size: 0.75rem !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 999px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+  }
+  .h2-cta-btn-group {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  .h2-cta-btn-group .btn {
+    width: 100% !important;
+  }
+  .h2-cta-glass-panel {
+    padding: 1.35rem 1rem !important;
+    border-radius: 18px !important;
+  }
+  .h2-cta-features-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0.95rem !important;
+    width: fit-content !important;
+    margin: 0 auto !important;
+  }
+  .h2-cta-feature-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .h2-feature-icon-box {
+    width: 26px !important;
+    min-width: 26px !important;
+    height: 26px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-shrink: 0 !important;
+  }
+  .h2-feature-text {
+    color: #FFFFFF !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Small Mobile (≤ 480px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  /* Collapse some dashboard row gaps */
+  .dash-main .row.g-4 { --bs-gutter-y: 0.75rem; }
+
+  /* Hero section */
+  .hero-section .display-4,
+  .home-2-hero .display-4 { font-size: 1.85rem; }
+
+  /* Footer newsletter input + button: stack */
+  .footer-form .input-group { flex-direction: column; }
+  .footer-form .input-group .form-control { border-radius: 8px !important; margin-bottom: .5rem; }
+  .footer-form .input-group .btn { border-radius: 8px !important; width: 100%; }
+}
+
+/* -----------------------------------------------------------------------
+   Extra Small Mobile (≤ 375px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 375px) {
+  .section-title h2 { font-size: 1.55rem; }
+  .hero-section .display-4 { font-size: 1.65rem; }
+  .navbar-brand { font-size: 1.2rem; }
+}
+
+/* -----------------------------------------------------------------------
+   Global overflow protection — no horizontal scroll on ANY breakpoint
+   ----------------------------------------------------------------------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  max-width: none;
+}
+

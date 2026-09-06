@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans & Subscriptions | JoyLoop Toy Rental</title>
+  <meta name="description" content="Choose the perfect JoyLoop subscription plan for your family. Flexible monthly toy rotation plans starting at $29/month. Zero commitments, cancel anytime.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="plans-page">
+  <!-- Modern Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader-inner">
+      <div class="loader-spinner-ring">
+        <i class="bi bi-box-seam text-primary fs-3"></i>
+      </div>
+      <div class="loader-brand-text">Joy<span>Loop</span></div>
+      <div class="loader-progress-bar"><div class="loader-progress-val"></div></div>
+    </div>
+  </div>
+
+    <!-- Header -->
+  <header class="site-header">
+    <div class="nav-shell">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        <div class="navbar-inner">
+          <a class="navbar-brand" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+
+          <div class="nav-menu d-none d-xl-flex">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home <i class="bi bi-chevron-down nav-caret"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+              <li class="nav-item"><a class="nav-link active" href="plans.html">Plans</a></li>
+              <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="hygiene.html">Hygiene</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-actions d-none d-xl-flex">
+            <button class="nav-icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><i class="bi bi-moon-stars-fill"></i> <span class="theme-label">Dark</span></button>
+            <button class="nav-toggle-btn" type="button" data-direction-toggle aria-label="Switch to RTL" title="Switch direction"><span>RTL</span></button>
+            <a href="login.html" class="btn btn-sm btn-nav-login">Login</a>
+          </div>
+
+          <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Off-canvas Navigation -->
+  <div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <a class="navbar-brand m-0" href="index.html" id="mobileNavLabel">
+        <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="mobile-nav-list list-unstyled">
+        <li><a class="" href="index.html">Home 1</a></li>
+        <li><a class="" href="home-2.html">Home 2</a></li>
+        <li><a class="" href="how-it-works.html">How It Works</a></li>
+        <li><a class="" href="catalog.html">Catalog</a></li>
+        <li><a class="active" href="plans.html">Plans</a></li>
+        <li><a class="" href="hygiene.html">Hygiene</a></li>
+        <li><a class="" href="about.html">About</a></li>
+        <li><a class="" href="contact.html">Contact</a></li>
+        <li><a href="dashboard/index.html">Dashboard</a></li>
+      </ul>
+      <div class="mobile-nav-actions mt-auto pt-4 border-top">
+        <button class="btn btn-outline-secondary w-100 mb-2" type="button" data-theme-toggle><i class="bi bi-moon-stars-fill me-2"></i>Light / Dark</button>
+        <button class="btn btn-outline-secondary w-100 mb-3" type="button" data-direction-toggle><i class="bi bi-text-paragraph me-2"></i><span>RTL / LTR</span></button>
+        <a href="login.html" class="btn btn-primary w-100">Login to Portal</a>
+      </div>
+    </div>
+  </div>
+
+<main class="pt-5 mt-4">
+    <!-- Header Banner -->
+    <section class="bg-light-blue py-5 border-bottom border-light-cyan plans-hero">
+      <div class="container text-center">
+        <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-2 fw-bold">Flexible Pricing</span>
+        <h1 class="display-4 fw-bold text-dark mb-3">Simple Plans for Endless Discovery</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 650px;">
+          Choose the ideal rotation volume for your child's age and play space. No long-term contracts—pause or cancel in 1 click.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div class="d-inline-flex align-items-center bg-white p-2 rounded-pill border border-light-cyan shadow-sm mt-3">
+          <span class="fw-bold px-3 text-dark small" id="monthlyLabel">Monthly Billing</span>
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" id="billingToggle">
+          </div>
+          <span class="fw-bold px-3 text-primary small" id="annualLabel">Annual Billing <span class="badge bg-secondary text-white rounded-pill ms-1">Save 20%</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Pricing Cards -->
+    <section class="section-padding py-5">
+      <div class="container">
+        <div class="row g-4 align-items-stretch plan-pricing-row">
+          <!-- STARTER -->
+          <div class="col-lg-4 d-flex">
+            <div class="card-soft p-4 rounded-4 shadow-sm border border-light-cyan w-100 h-100 d-flex flex-column justify-content-between hover-lift">
+              <div class="d-flex flex-column flex-grow-1">
+                <span class="badge bg-light-cyan text-secondary border border-light-cyan px-3 py-2 rounded-pill mb-3 fw-bold align-self-start">Starter Kit</span>
+                <h3 class="fw-bold text-dark mb-2">Starter</h3>
+                <p class="small text-muted mb-4">Ideal for toddlers and families trying toy rotation for the first time.</p>
+                
+                <div class="mb-4">
+                  <span class="display-4 fw-extrabold text-dark plan-price" data-monthly="29" data-annual="23">$29</span>
+                  <span class="text-muted fw-bold">/ month</span>
+                </div>
+
+                <ul class="list-unstyled mb-4 d-flex flex-column gap-3 border-top pt-4 flex-grow-1">
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span><strong>2 Premium Toys</strong> per box</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>1 Toy Swap Rotation / Month</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Hospital-Grade UV-C Sanitized</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Free Pre-Paid Return Label</span></li>
+                  <li class="d-flex align-items-center gap-2 text-muted opacity-50"><i class="bi bi-x-circle"></i> <span>STEM & Robotics Access</span></li>
+                </ul>
+              </div>
+              <a href="dashboard/index.html" class="btn btn-outline-primary w-100 rounded-pill py-3 hover-lift mt-auto">Choose Starter</a>
+            </div>
+          </div>
+
+          <!-- PLAY PLUS -->
+          <div class="col-lg-4 d-flex">
+            <div class="card-soft p-4 rounded-4 shadow-sm border border-light-cyan w-100 h-100 d-flex flex-column justify-content-between hover-lift">
+              <div class="d-flex flex-column flex-grow-1">
+                <span class="badge bg-light-cyan text-secondary border border-light-cyan px-3 py-2 rounded-pill mb-3 fw-bold align-self-start">Maximum Value</span>
+                <h3 class="fw-bold text-dark mb-2">Play Plus</h3>
+                <p class="small text-muted mb-4">Perfect balance of variety, STEM challenges, and motor skill toys.</p>
+                
+                <div class="mb-4">
+                  <span class="display-4 fw-extrabold text-dark plan-price" data-monthly="49" data-annual="39">$49</span>
+                  <span class="text-muted fw-bold">/ month</span>
+                </div>
+
+                <ul class="list-unstyled mb-4 d-flex flex-column gap-3 border-top pt-4 flex-grow-1">
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span><strong>4 Premium Toys</strong> per box</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Flexible Monthly Toy Swaps</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Full Access to STEM & Robotics</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Normal Play Wear Coverage</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Free Pre-Paid Return Shipping</span></li>
+                </ul>
+              </div>
+              <a href="dashboard/index.html" class="btn btn-outline-primary w-100 rounded-pill py-3 hover-lift mt-auto">Choose Play Plus</a>
+            </div>
+          </div>
+
+          <!-- ADVENTURE -->
+          <div class="col-lg-4 d-flex">
+            <div class="card-soft p-4 rounded-4 shadow-sm border border-light-cyan w-100 h-100 d-flex flex-column justify-content-between hover-lift">
+              <div class="d-flex flex-column flex-grow-1">
+                <span class="badge bg-light-cyan text-secondary border border-light-cyan px-3 py-2 rounded-pill mb-3 fw-bold align-self-start">Ultimate Experience</span>
+                <h3 class="fw-bold text-dark mb-2">Adventure</h3>
+                <p class="small text-muted mb-4">Designed for multi-child families or children needing maximum variety.</p>
+                
+                <div class="mb-4">
+                  <span class="display-4 fw-extrabold text-dark plan-price" data-monthly="79" data-annual="63">$79</span>
+                  <span class="text-muted fw-bold">/ month</span>
+                </div>
+
+                <ul class="list-unstyled mb-4 d-flex flex-column gap-3 border-top pt-4 flex-grow-1">
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span><strong>6 Premium Toys</strong> per box</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Includes Premium Activity Kits</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Priority Shipping & Custom Box</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Multiple Child Profile Support</span></li>
+                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> <span>Zero Damage Penalty Coverage</span></li>
+                </ul>
+              </div>
+              <a href="dashboard/index.html" class="btn btn-outline-primary w-100 rounded-pill py-3 hover-lift mt-auto">Choose Adventure</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Comparison Matrix -->
+    <section class="section-padding bg-light-blue py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Compare Plan Features</h2>
+          <p>Detailed feature breakdown across all 3 JoyLoop tiers.</p>
+        </div>
+
+        <div class="table-responsive bg-white rounded-4 shadow-sm border border-light-cyan p-4">
+          <table class="table align-middle mb-0">
+            <thead>
+              <tr class="border-bottom">
+                <th scope="col" class="fs-5 fw-bold text-dark py-3">Feature</th>
+                <th scope="col" class="text-center text-secondary fw-bold">Starter</th>
+                <th scope="col" class="text-center text-primary fw-bold">Play Plus</th>
+                <th scope="col" class="text-center text-dark fw-bold">Adventure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-semibold text-dark">Toys Included Per Box</td>
+                <td class="text-center">2 Toys</td>
+                <td class="text-center fw-bold text-primary">4 Toys</td>
+                <td class="text-center">6 Toys</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold text-dark">Rotation Frequency</td>
+                <td class="text-center">Monthly</td>
+                <td class="text-center">Monthly</td>
+                <td class="text-center">Monthly / Priority</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold text-dark">STEM & Robotics Kits Access</td>
+                <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+              </tr>
+              <tr>
+                <td class="fw-semibold text-dark">Pre-Paid Return Label Included</td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+              </tr>
+              <tr>
+                <td class="fw-semibold text-dark">Wear & Tear Damage Protection</td>
+                <td class="text-center">Standard</td>
+                <td class="text-center fw-bold text-primary">Full Coverage</td>
+                <td class="text-center">Full Coverage</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold text-dark">Multi-Child Profile Customization</td>
+                <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+                <td class="text-center"><i class="bi bi-dash text-muted"></i></td>
+                <td class="text-center"><i class="bi bi-check-lg text-primary fs-4"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing FAQ Accordion -->
+    <section class="section-padding py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about JoyLoop subscriptions.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion accordion-flush" id="pricingFaq">
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header">
+                  <button class="accordion-button fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Can I pause or cancel my subscription anytime?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted">
+                    Yes! There are zero long-term commitments. You can pause or cancel your subscription at any time directly from your parent account dashboard before your next billing date.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    What happens if a toy block or piece goes missing?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted">
+                    We understand that pieces get lost during active play! Small non-essential pieces (like single building blocks or puzzle pegs) are covered under our normal wear policy with zero fees.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    How does return shipping work?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted">
+                    Return shipping is 100% free! Every JoyLoop box includes a pre-printed, pre-paid shipping label. Simply stick it over the box address and drop it off at any local parcel station.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-padding bg-light-blue reveal-anim"><div class="container"><div class="row g-5 align-items-center"><div class="col-lg-6"><span class="badge bg-secondary text-white rounded-pill px-3 py-2 mb-3">Choose By Rhythm</span><h2>The best plan is the one your family can keep.</h2><p class="text-muted">Start with the amount of play space you have, then adjust as your child’s interests change.</p></div><div class="col-lg-6"><div class="table-responsive bg-white rounded-4 shadow-sm"><table class="table align-middle mb-0"><thead><tr><th>Need</th><th>Best match</th></tr></thead><tbody><tr><td>Try the loop</td><td class="text-primary fw-bold">Starter</td></tr><tr><td>Rotate often</td><td class="text-secondary fw-bold">Play Plus</td></tr><tr><td>Share with siblings</td><td class="text-primary fw-bold">Adventure</td></tr></tbody></table></div></div></div></div></section>
+    <section class="section-padding reveal-anim"><div class="container"><div class="row g-4"><div class="col-md-4"><div class="p-4 border rounded-4 h-100"><i class="bi bi-calendar2-check text-primary fs-2"></i><h5 class="mt-3">Predictable billing</h5><p class="small text-muted mb-0">Know the monthly rhythm and see your next renewal in the dashboard.</p></div></div><div class="col-md-4"><div class="p-4 border rounded-4 h-100"><i class="bi bi-arrow-left-right text-secondary fs-2"></i><h5 class="mt-3">Flexible swaps</h5><p class="small text-muted mb-0">Change direction when a new interest appears or a kit has had its moment.</p></div></div><div class="col-md-4"><div class="p-4 border rounded-4 h-100"><i class="bi bi-pause-circle text-primary fs-2"></i><h5 class="mt-3">Easy pauses</h5><p class="small text-muted mb-0">Take a breather for travel, holidays, or simply a full play shelf.</p></div></div></div></div></section>
+    <section class="section-padding bg-light-blue reveal-anim"><div class="container text-center"><span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">No Pressure To Commit Forever</span><h2>Start small. Keep what works.</h2><p class="lead text-muted">Every plan gives you room to learn your family’s ideal rotation speed.</p><a href="register.html" class="btn btn-primary btn-lg">Choose your starting plan</a></div></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 footer-widget pe-lg-5">
+          <a class="navbar-brand mb-4 d-inline-block" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+          <p>We are on a mission to make playtime sustainable, educational, and clutter-free. Join the circular economy of premium toys today.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="catalog.html">Toy Catalog</a></li>
+            <li><a href="plans.html">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="hygiene.html">Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h4>Newsletter</h4>
+          <p>Subscribe for new arrival alerts.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control border-0 shadow-sm" placeholder="Your email address">
+              <button class="btn btn-primary px-4" type="submit"><i class="bi bi-send"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center pt-4 mt-4 border-top">
+        <p class="mb-0">&copy; 2026 JoyLoop Toy Rentals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('billingToggle');
+      const prices = document.querySelectorAll('.plan-price');
+
+      if (toggle) {
+        toggle.addEventListener('change', () => {
+          const isAnnual = toggle.checked;
+          prices.forEach(el => {
+            const val = isAnnual ? el.getAttribute('data-annual') : el.getAttribute('data-monthly');
+            el.textContent = '$' + val;
+          });
+        });
+      }
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</body>
+</html>

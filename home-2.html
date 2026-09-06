@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoyLoop | Editorial Experience & Subscription Journey</title>
+  <meta name="description" content="Discover JoyLoop's editorial toy subscription experience. One subscription for endless ways to play, curated for child development and sustainable living.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="home-2-page">
+  <!-- Modern Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader-inner">
+      <div class="loader-spinner-ring">
+        <i class="bi bi-box-seam text-primary fs-3"></i>
+      </div>
+      <div class="loader-brand-text">Joy<span>Loop</span></div>
+      <div class="loader-progress-bar"><div class="loader-progress-val"></div></div>
+    </div>
+  </div>
+
+    <!-- Header -->
+  <header class="site-header">
+    <div class="nav-shell">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        <div class="navbar-inner">
+          <a class="navbar-brand" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+
+          <div class="nav-menu d-none d-xl-flex">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home <i class="bi bi-chevron-down nav-caret"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                  <li><a class="dropdown-item active" href="home-2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+              <li class="nav-item"><a class="nav-link" href="plans.html">Plans</a></li>
+              <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="hygiene.html">Hygiene</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-actions d-none d-xl-flex">
+            <button class="nav-icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><i class="bi bi-moon-stars-fill"></i> <span class="theme-label">Dark</span></button>
+            <button class="nav-toggle-btn" type="button" data-direction-toggle aria-label="Switch to RTL" title="Switch direction"><span>RTL</span></button>
+            <a href="login.html" class="btn btn-sm btn-nav-login">Login</a>
+          </div>
+
+          <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Off-canvas Navigation -->
+  <div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <a class="navbar-brand m-0" href="index.html" id="mobileNavLabel">
+        <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="mobile-nav-list list-unstyled">
+        <li><a class="" href="index.html">Home 1</a></li>
+        <li><a class="active" href="home-2.html">Home 2</a></li>
+        <li><a class="" href="how-it-works.html">How It Works</a></li>
+        <li><a class="" href="catalog.html">Catalog</a></li>
+        <li><a class="" href="plans.html">Plans</a></li>
+        <li><a class="" href="hygiene.html">Hygiene</a></li>
+        <li><a class="" href="about.html">About</a></li>
+        <li><a class="" href="contact.html">Contact</a></li>
+        <li><a href="dashboard/index.html">Dashboard</a></li>
+      </ul>
+      <div class="mobile-nav-actions mt-auto pt-4 border-top">
+        <button class="btn btn-outline-secondary w-100 mb-2" type="button" data-theme-toggle><i class="bi bi-moon-stars-fill me-2"></i>Light / Dark</button>
+        <button class="btn btn-outline-secondary w-100 mb-3" type="button" data-direction-toggle><i class="bi bi-text-paragraph me-2"></i><span>RTL / LTR</span></button>
+        <a href="login.html" class="btn btn-primary w-100">Login to Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. EDITORIAL FULL-WIDTH BG HERO -->
+    <section class="h2-hero h2-hero-bg reveal-anim" id="editorial-hero" style="background-image: url('assets/images/home2/editorial-hero.jpg');">
+      <div class="h2-hero-overlay"></div>
+      <div class="container h2-hero-inner">
+        <div class="row justify-content-start">
+          <div class="col-lg-8 col-xl-7">
+            <div class="animate-fade-up">
+              <span class="h2-issue-badge h2-issue-badge-light">
+                <i class="bi bi-journal-bookmark-fill"></i> The Playroom Journal &bull; Vol. 04
+              </span>
+            </div>
+            <h1 class="h2-hero-title h2-hero-title-light animate-fade-up delay-1">
+              Curated Discovery.<br>
+              <span class="h2-gradient-text-light">Zero Living Room Clutter.</span>
+            </h1>
+            <p class="h2-hero-lead h2-hero-lead-light animate-fade-up delay-2">
+              Step into an intentional way of playing. JoyLoop delivers circular, Scandinavian-designed developmental play kits rotated on your family's schedule—giving your children heirloom wonder without landfill guilt or toy clutter.
+            </p>
+            <div class="d-flex flex-wrap align-items-center gap-3 mt-4 animate-fade-up delay-3">
+              <a href="plans.html" class="btn btn-primary btn-lg rounded-pill px-4 py-3 hover-lift">
+                Explore Subscription Editions <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a href="#journey" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 hover-lift">
+                The 4-Week Ritual
+              </a>
+            </div>
+            <!-- Trust Ribbon -->
+            <div class="row g-3 mt-4 pt-3 border-top border-white border-opacity-25 animate-fade-up delay-4">
+              <div class="col-4">
+                <div class="fw-bold fs-5 text-white">100% Solid</div>
+                <small class="d-block lh-sm text-white text-opacity-75">FSC Certified Beechwood</small>
+              </div>
+              <div class="col-4 border-start border-white border-opacity-25 ps-3">
+                <div class="fw-bold fs-5 text-info">Medical UV-C</div>
+                <small class="d-block lh-sm text-white text-opacity-75">Hospital Sanitization</small>
+              </div>
+              <div class="col-4 border-start border-white border-opacity-25 ps-3">
+                <div class="fw-bold fs-5 text-info">Zero Waste</div>
+                <small class="d-block lh-sm text-white text-opacity-75">Doorstep Box Swaps</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FOUR PILLARS OF INTENTIONAL PLAY -->
+    <section class="section-padding bg-white reveal-anim" id="pillars">
+      <div class="container">
+        <div class="row g-4 align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="badge bg-light-cyan text-secondary px-3 py-2 rounded-pill fw-bold mb-3 border border-light-cyan">
+              <i class="bi bi-compass me-1"></i> Our Guiding Principles
+            </span>
+            <h2 class="display-6 fw-extrabold mb-0">The Four Pillars of Intentional Play</h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-muted mb-0">We designed JoyLoop for families who believe childhood magic shouldn't come at the cost of overconsumption or noisy plastic waste.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="h2-pillar-card">
+              <div class="h2-pillar-num">01</div>
+              <h4 class="fw-bold text-dark mb-2">The 28-Day Horizon</h4>
+              <p class="text-muted small mb-3">Children develop in rapid sensory leaps. By rotating sets every four weeks, cognitive novelty stays peak while living spaces remain serene.</p>
+              <span class="small fw-bold text-primary">Developmental Pacing <i class="bi bi-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="h2-pillar-card">
+              <div class="h2-pillar-num">02</div>
+              <h4 class="fw-bold text-dark mb-2">Heirloom Timber Only</h4>
+              <p class="text-muted small mb-3">We reject brittle plastic and battery noise. Every kit features tactile European beechwood, water-based non-toxic finishes, and museum-grade craft.</p>
+              <span class="small fw-bold text-primary">FSC Certified Materials <i class="bi bi-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="h2-pillar-card">
+              <div class="h2-pillar-num">03</div>
+              <h4 class="fw-bold text-dark mb-2">Clinical-Grade Reset</h4>
+              <p class="text-muted small mb-3">Before arriving on your rug, every piece undergoes high-temp steam cleaning, botanical enzyme washing, and medical UV-C terminal sterilization.</p>
+              <span class="small fw-bold text-primary">Zero-Pathogen Guarantee <i class="bi bi-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="h2-pillar-card">
+              <div class="h2-pillar-num">04</div>
+              <h4 class="fw-bold text-dark mb-2">The Serene Living Room</h4>
+              <p class="text-muted small mb-3">No more overflowing plastic bins or broken toy graveyards. When a chapter ends, pack the canvas tote and seamlessly welcome the next stage.</p>
+              <span class="small fw-bold text-primary">The Minimalist Home <i class="bi bi-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DEVELOPMENTAL LOOKBOOK CHAPTERS -->
+    <section class="section-padding bg-light-cyan reveal-anim" id="lookbook">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-white text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm border border-light-cyan">
+            <i class="bi bi-book me-1"></i> The Playroom Lookbook
+          </span>
+          <h2 class="display-6 fw-extrabold mb-3">The Curated Wardrobe of Play</h2>
+          <p class="text-muted">Explore how each chapter is meticulously calibrated with child psychologists to support essential cognitive, fine motor, and creative milestones.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <div class="nav flex-column h2-lookbook-nav" id="lookbookTabs" role="tablist">
+              <button class="nav-link active" id="tab-ch1-btn" data-bs-toggle="pill" data-bs-target="#ch-1" type="button" role="tab" aria-controls="ch-1" aria-selected="true">
+                <div>
+                  <span class="small text-uppercase fw-bold opacity-75 d-block">Chapter 01 &bull; 0–12 Mo</span>
+                  <strong class="fs-6">Sensory Awakening</strong>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="nav-link" id="tab-ch2-btn" data-bs-toggle="pill" data-bs-target="#ch-2" type="button" role="tab" aria-controls="ch-2" aria-selected="false">
+                <div>
+                  <span class="small text-uppercase fw-bold opacity-75 d-block">Chapter 02 &bull; 1–3 Yrs</span>
+                  <strong class="fs-6">Narrative Builders</strong>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="nav-link" id="tab-ch3-btn" data-bs-toggle="pill" data-bs-target="#ch-3" type="button" role="tab" aria-controls="ch-3" aria-selected="false">
+                <div>
+                  <span class="small text-uppercase fw-bold opacity-75 d-block">Chapter 03 &bull; 3–5 Yrs</span>
+                  <strong class="fs-6">Young Inventors</strong>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="nav-link" id="tab-ch4-btn" data-bs-toggle="pill" data-bs-target="#ch-4" type="button" role="tab" aria-controls="ch-4" aria-selected="false">
+                <div>
+                  <span class="small text-uppercase fw-bold opacity-75 d-block">Chapter 04 &bull; 5–8 Yrs</span>
+                  <strong class="fs-6">Kinetic Discovery</strong>
+                </div>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content" id="lookbookContent">
+              <!-- Chapter 1 -->
+              <div class="tab-pane fade show active" id="ch-1" role="tabpanel" aria-labelledby="tab-ch1-btn">
+                <div class="h2-lookbook-card">
+                  <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6 h2-lookbook-img-col">
+                      <img src="assets/images/home2/montessori-sensory.jpg" alt="Toddler exploring pastel Montessori sensory cylinders" class="h2-lookbook-img">
+                    </div>
+                    <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center h2-lookbook-content">
+                      <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2 align-self-start">Sensory & Motor Foundation</span>
+                      <h3 class="fw-bold text-dark mb-3">Tactile Awakening & Spatial Grasp</h3>
+                      <p class="text-muted small mb-4">
+                        Precision-turned beechwood cylinders, graduated pastel nesting cups, and organic woven texture discs designed for foundational palmar grasp, sensory integration, and early hand-eye precision.
+                      </p>
+                      <div class="p-3 bg-light-cyan rounded-3 mb-4 h2-lookbook-highlights">
+                        <div class="small fw-bold text-dark mb-1">Kit Highlights:</div>
+                        <span class="small text-muted">Beech Sensory Cylinders &bull; Calibrated Sound Shakers &bull; Organic Cotton Texture Pad</span>
+                      </div>
+                      <a href="plans.html" class="btn btn-outline-primary rounded-pill btn-sm align-self-start px-3 py-2">Discover 0–12 Month Edition &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chapter 2 -->
+              <div class="tab-pane fade" id="ch-2" role="tabpanel" aria-labelledby="tab-ch2-btn">
+                <div class="h2-lookbook-card">
+                  <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6 h2-lookbook-img-col">
+                      <img src="assets/images/home2/imaginative-narrative.jpg" alt="Child playing with woodland animal figurines and wooden treehouse" class="h2-lookbook-img">
+                    </div>
+                    <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center h2-lookbook-content">
+                      <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2 align-self-start">Social & Imaginative Worlds</span>
+                      <h3 class="fw-bold text-dark mb-3">Storytelling & Expressive Play</h3>
+                      <p class="text-muted small mb-4">
+                        Handcrafted woodland animal figurines, multi-level nesting groves, and expressive modular elements that foster language enrichment, emotional articulation, and collaborative pretend scenarios.
+                      </p>
+                      <div class="p-3 bg-light-cyan rounded-3 mb-4 h2-lookbook-highlights">
+                        <div class="small fw-bold text-dark mb-1">Kit Highlights:</div>
+                        <span class="small text-muted">Artisan Woodland Fauna &bull; Modular Canopy Treehouse &bull; Emotion Scenario Cards</span>
+                      </div>
+                      <a href="plans.html" class="btn btn-outline-primary rounded-pill btn-sm align-self-start px-3 py-2">Discover 1–3 Years Edition &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chapter 3 -->
+              <div class="tab-pane fade" id="ch-3" role="tabpanel" aria-labelledby="tab-ch3-btn">
+                <div class="h2-lookbook-card">
+                  <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6 h2-lookbook-img-col">
+                      <img src="assets/images/home2/stem-mechanics.jpg" alt="Child building clockwork gear wooden robot" class="h2-lookbook-img">
+                    </div>
+                    <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center h2-lookbook-content">
+                      <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2 align-self-start">STEM Logic & Mechanics</span>
+                      <h3 class="fw-bold text-dark mb-3">Spatial Physics & Kinematic Wonder</h3>
+                      <p class="text-muted small mb-4">
+                        Solid brass-pinned wooden cogs, kinetic track assemblies, and interlocking gear systems that introduce cause-and-effect, ratio mechanics, and intuitive structural engineering.
+                      </p>
+                      <div class="p-3 bg-light-cyan rounded-3 mb-4 h2-lookbook-highlights">
+                        <div class="small fw-bold text-dark mb-1">Kit Highlights:</div>
+                        <span class="small text-muted">Brass-Axis Gear Board &bull; Cantilever Bridge Planks &bull; Kinematic Automata Set</span>
+                      </div>
+                      <a href="plans.html" class="btn btn-outline-primary rounded-pill btn-sm align-self-start px-3 py-2">Discover 3–5 Years Edition &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chapter 4 -->
+              <div class="tab-pane fade" id="ch-4" role="tabpanel" aria-labelledby="tab-ch4-btn">
+                <div class="h2-lookbook-card">
+                  <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6 h2-lookbook-img-col">
+                      <img src="assets/images/home2/outdoor-adventure.jpg" alt="Child balancing on curved birch balance rocker board" class="h2-lookbook-img">
+                    </div>
+                    <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center h2-lookbook-content">
+                      <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2 align-self-start">Gross Motor & Dynamic Balance</span>
+                      <h3 class="fw-bold text-dark mb-3">Dynamic Equilibrium & Full-Body Joy</h3>
+                      <p class="text-muted small mb-4">
+                        Multi-ply curved birch balance rockers, calibrated agility rings, and obstacle sequencing elements that channel youthful energy into coordination, core stability, and joyful physical confidence.
+                      </p>
+                      <div class="p-3 bg-light-cyan rounded-3 mb-4 h2-lookbook-highlights">
+                        <div class="small fw-bold text-dark mb-1">Kit Highlights:</div>
+                        <span class="small text-muted">FSC Birch Rocker Board &bull; Calibrated Stepping Stones &bull; Agility Rhythm Set</span>
+                      </div>
+                      <a href="plans.html" class="btn btn-outline-primary rounded-pill btn-sm align-self-start px-3 py-2">Discover 5–8 Years Edition &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE 4-WEEK JOURNEY OF A BOX (NARRATIVE RITUAL) -->
+    <section class="section-padding bg-white reveal-anim" id="journey">
+      <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6">
+            <span class="badge bg-light-cyan text-secondary px-3 py-2 rounded-pill fw-bold mb-3 border border-light-cyan">
+              <i class="bi bi-calendar-check me-1"></i> The Subscription Rhythm
+            </span>
+            <h2 class="display-6 fw-extrabold mb-3">The 28-Day Play Ritual</h2>
+            <p class="text-muted mb-0">Unlike traditional toy ownership that leads to forgotten piles and sensory exhaustion, JoyLoop creates an intentional monthly cycle of anticipation, deep focus, and seamless renewal.</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <img src="assets/images/home2/unboxing-moment.jpg" alt="Mother and child unboxing curated JoyLoop kit" class="img-fluid rounded-4 shadow-md max-h-350 object-fit-cover">
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="h2-timeline-card p-4">
+              <div class="h2-step-badge">W1</div>
+              <span class="badge bg-light-cyan text-primary rounded-pill px-3 py-1 small fw-bold mb-2">Days 1–7</span>
+              <h5 class="fw-bold text-dark mb-2">The Unboxing Wonder</h5>
+              <p class="text-muted small mb-0">The signature canvas tote arrives sanitized and sealed. Opening the box is a celebratory family ritual as your child explores the fresh shapes and tactile textures.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="h2-timeline-card p-4">
+              <div class="h2-step-badge">W2</div>
+              <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2">Days 8–14</span>
+              <h5 class="fw-bold text-dark mb-2">Deep Focus & Mastery</h5>
+              <p class="text-muted small mb-0">First impressions evolve into intense concentration. Our included Parent Playbook highlights nuanced developmental challenges embedded in each piece.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="h2-timeline-card p-4">
+              <div class="h2-step-badge">W3</div>
+              <span class="badge bg-light-cyan text-primary rounded-pill px-3 py-1 small fw-bold mb-2">Days 15–21</span>
+              <h5 class="fw-bold text-dark mb-2">Cross-Play Invention</h5>
+              <p class="text-muted small mb-0">Familiarity sparks divergent thinking. The kit pieces merge with everyday living room items, blankets, and books to build surprising new imaginary worlds.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="h2-timeline-card p-4">
+              <div class="h2-step-badge">W4</div>
+              <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold mb-2">Days 22–28</span>
+              <h5 class="fw-bold text-dark mb-2">The Sunday Reset</h5>
+              <p class="text-muted small mb-0">Pack the canvas tote in under 3 minutes. Your pre-scheduled courier picks it up from your porch as the next curated chapter arrives. Zero clutter left behind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CIRCULAR IMPACT DASHBOARD & COMPARISON MATRIX -->
+    <section class="section-padding bg-light-cyan reveal-anim" id="impact">
+      <div class="container">
+        <div class="row g-5 align-items-center mb-5">
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <img src="assets/images/home2/circular-studio.jpg" alt="JoyLoop sanitization laboratory and circular restoration studio" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 480px;">
+              <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white rounded-3 shadow-md border">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="icon-circle bg-primary text-white p-2 rounded-circle">
+                    <i class="bi bi-shield-check fs-4"></i>
+                  </div>
+                  <div>
+                    <strong class="d-block text-dark small">Sanitization Clean Lab</strong>
+                    <small class="text-muted">High-Temp Steam &bull; UV-C Terminal Cycle</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <span class="badge bg-white text-secondary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm border border-light-cyan">
+              <i class="bi bi-recycle me-1"></i> Data & Accountability
+            </span>
+            <h2 class="display-6 fw-extrabold mb-3">Lighter on the Earth.<br>Richer for Your Child.</h2>
+            <p class="text-muted mb-4">The average child outgrows commercial toys in under 30 days, generating millions of pounds of discarded plastic annually. JoyLoop reclaims the joy of play through an audited circular model.</p>
+
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="h2-impact-stat text-primary">84%</div>
+                <div class="fw-bold text-dark">Plastic Reduction</div>
+                <small class="text-muted">Average household toy waste cut in first 6 months</small>
+              </div>
+              <div class="col-6">
+                <div class="h2-impact-stat text-secondary">$1,420</div>
+                <div class="fw-bold text-dark">Annual Family Savings</div>
+                <small class="text-muted">Compared to buying equivalent heirloom timber sets</small>
+              </div>
+              <div class="col-6">
+                <div class="h2-impact-stat text-dark">18,000+</div>
+                <div class="fw-bold text-dark">Active Play Hours</div>
+                <small class="text-muted">Logged across 3,200 conscious subscriber households</small>
+              </div>
+              <div class="col-6">
+                <div class="h2-impact-stat text-primary">100%</div>
+                <div class="fw-bold text-dark">Zero-Landfill Guarantee</div>
+                <small class="text-muted">All components repaired, recycled, or renewed</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table Matrix -->
+        <div class="bg-white rounded-4 p-4 p-md-5 shadow-sm border mt-4">
+          <h4 class="fw-bold text-dark mb-4 text-center">Traditional Toy Buying vs. The JoyLoop Circular Model</h4>
+          <div class="table-responsive">
+            <table class="table h2-compare-table align-middle mb-0">
+              <thead>
+                <tr class="table-light">
+                  <th class="fw-bold text-dark" style="width: 34%;">Feature / Experience</th>
+                  <th class="fw-bold text-muted" style="width: 33%;">The Traditional Buying Cycle</th>
+                  <th class="fw-bold text-primary" style="width: 33%;"><i class="bi bi-star-fill me-1"></i> The JoyLoop Subscription</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-semibold text-dark">Living Room Clutter</td>
+                  <td class="text-muted">Overflowing plastic tubs, missing parts, constant tidying stress</td>
+                  <td class="text-dark fw-bold text-primary"><i class="bi bi-check2 text-success me-2"></i>Single rotating canvas tote &bull; zero permanent clutter</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold text-dark">Developmental Relevance</td>
+                  <td class="text-muted">Kids outgrow toys in 2–4 weeks; items gather dust</td>
+                  <td class="text-dark fw-bold text-primary"><i class="bi bi-check2 text-success me-2"></i>Fresh kits calibrated precisely to child's evolving age stage</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold text-dark">Materials & Craft</td>
+                  <td class="text-muted">Brittle petroleum plastic, synthetic paint, battery dependency</td>
+                  <td class="text-dark fw-bold text-primary"><i class="bi bi-check2 text-success me-2"></i>FSC solid European beechwood, food-grade water dyes</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold text-dark">Hygiene & Cleanliness</td>
+                  <td class="text-muted">Rarely sanitized; dust collection in open storage bins</td>
+                  <td class="text-dark fw-bold text-primary"><i class="bi bi-check2 text-success me-2"></i>Medical-grade steam and UV-C disinfection before delivery</td>
+                </tr>
+                <tr>
+                  <td class="fw-semibold text-dark">Cost Efficiency</td>
+                  <td class="text-muted">$80–$150 per premium kit with rapid depreciation</td>
+                  <td class="text-dark fw-bold text-primary"><i class="bi bi-check2 text-success me-2"></i>From $39/mo for complete access to multiple heirloom kits</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CURATED THEME KITS SPOTLIGHT (BENTO GRID) -->
+    <section class="section-padding bg-white reveal-anim" id="kits">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+          <div>
+            <span class="badge bg-light-cyan text-secondary px-3 py-2 rounded-pill fw-bold mb-3 border border-light-cyan">
+              <i class="bi bi-boxes me-1"></i> Thematic Archives
+            </span>
+            <h2 class="display-6 fw-extrabold mb-0">Curated Theme Kits Spotlight</h2>
+          </div>
+          <a href="catalog.html" class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3 mt-md-0 hover-lift">
+            Browse Full Catalog Archives &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Main Hero Bento Card -->
+          <div class="col-lg-6">
+            <div class="h2-collection-card p-4 p-md-5 d-flex flex-column justify-content-between h-100 bg-light-cyan border-0">
+              <div>
+                <span class="badge bg-primary text-white rounded-pill px-3 py-1 small fw-bold mb-3">Signature Edition</span>
+                <h3 class="display-6 fw-bold text-dark mb-3">The Master Curation Suite</h3>
+                <p class="text-muted mb-4">
+                  Each set in our Master Curation Suite is individually assembled with developmental pediatricians to stimulate spatial awareness, tactile dexterity, and divergent problem solving.
+                </p>
+                <div class="mb-4">
+                  <img src="assets/images/home2/collection-curation.jpg" alt="Artisan knolling flatlay of wooden Montessori toy subscription kit" class="img-fluid rounded-4 shadow-md w-100 object-fit-cover" style="max-height: 280px;">
+                </div>
+              </div>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-light-cyan">
+                <div>
+                  <span class="small text-muted d-block">Recommended For:</span>
+                  <strong class="text-dark">Ages 2 to 7 &bull; Monthly Rotation</strong>
+                </div>
+                <a href="plans.html" class="btn btn-primary rounded-pill px-4 py-2 small fw-bold">Select Edition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Bento Cards -->
+          <div class="col-lg-6">
+            <div class="row g-4 h-100">
+              <div class="col-12">
+                <div class="h2-collection-card p-4 bg-white d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold">Atelier Series</span>
+                        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 small"><i class="bi bi-shield-check me-1"></i>UV-C Sanitized</span>
+                      </div>
+                      <div class="text-end">
+                        <span class="fw-bold text-primary fs-6">$39/mo</span>
+                        <small class="text-muted d-block" style="font-size: 0.75rem;">all-inclusive</small>
+                      </div>
+                    </div>
+                    
+                    <div class="row g-3 align-items-center mb-3">
+                      <div class="col-4 col-sm-3">
+                        <img src="assets/images/home2/montessori-sensory.jpg" alt="Montessori Tactile Studio pieces" class="rounded-3 w-100 object-fit-cover shadow-xs" style="height: 96px;">
+                      </div>
+                      <div class="col-8 col-sm-9">
+                        <h4 class="fw-bold text-dark mb-1 fs-5">Montessori Tactile Studio</h4>
+                        <p class="text-muted small mb-0 lh-sm">
+                          Hand-turned beechwood sorting cylinders, sensory acoustic blocks, and tactile manipulation tiles designed for foundational motor precision.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-1 mb-3">
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-box-seam me-1 text-primary"></i>8 Heirloom Pieces</span>
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-journal-text me-1 text-info"></i>Parent Playbook</span>
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-star-fill me-1 text-warning"></i>4.9 (142 reviews)</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+                    <span class="badge bg-light text-dark rounded-pill px-3 py-1 small border fw-semibold"><i class="bi bi-person-fill text-muted me-1"></i>Ages 1–3</span>
+                    <a href="catalog.html" class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-semibold">View Kit Inventory &rarr;</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="h2-collection-card p-4 bg-white d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-light-cyan text-secondary rounded-pill px-3 py-1 small fw-bold">Mechanics Series</span>
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-2 py-1 small"><i class="bi bi-gear me-1"></i>STEM Calibrated</span>
+                      </div>
+                      <div class="text-end">
+                        <span class="fw-bold text-primary fs-6">$49/mo</span>
+                        <small class="text-muted d-block" style="font-size: 0.75rem;">all-inclusive</small>
+                      </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center mb-3">
+                      <div class="col-4 col-sm-3">
+                        <img src="assets/images/home2/stem-mechanics.jpg" alt="Kinetic Cog & Marble Lab wooden gears" class="rounded-3 w-100 object-fit-cover shadow-xs" style="height: 96px;">
+                      </div>
+                      <div class="col-8 col-sm-9">
+                        <h4 class="fw-bold text-dark mb-1 fs-5">Kinetic Cog & Marble Lab</h4>
+                        <p class="text-muted small mb-0 lh-sm">
+                          Interlocking wooden gear trains, reversible gradient chutes, and counterweight pendulums demonstrating early mechanical physics.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-1 mb-3">
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-gear-wide-connected me-1 text-primary"></i>14 Kinematic Gears</span>
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-arrow-repeat me-1 text-success"></i>Monthly Swap</span>
+                      <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small"><i class="bi bi-star-fill me-1 text-warning"></i>5.0 (98 reviews)</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+                    <span class="badge bg-light text-dark rounded-pill px-3 py-1 small border fw-semibold"><i class="bi bi-person-fill text-muted me-1"></i>Ages 4–7</span>
+                    <a href="catalog.html" class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-semibold">View Kit Inventory &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. VOICES FROM THE LOOP (EDITORIAL PARENT STORIES) -->
+    <section class="section-padding bg-light-cyan reveal-anim" id="voices">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-white text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm border border-light-cyan">
+            <i class="bi bi-chat-heart me-1"></i> Subscriber Journals
+          </span>
+          <h2 class="display-6 fw-extrabold mb-3">Voices From the Loop</h2>
+          <p class="text-muted">Read how intentional toy rotation has restored quiet calm, inspired deeper play, and decluttered homes across the country.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-lg-6">
+            <div class="h2-voice-card">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <img src="assets/images/home2/parent-story-1.jpg" alt="Elena Rostova and child" class="h2-voice-avatar">
+                <div>
+                  <h5 class="fw-bold text-dark mb-0">Elena Rostova</h5>
+                  <small class="text-muted d-block">Architect & Mother of 3-year-old Leo &bull; Stockholm / London</small>
+                  <span class="badge bg-light-cyan text-secondary rounded-pill px-2 py-0 small mt-1">18 Months in the Loop</span>
+                </div>
+              </div>
+              <p class="text-muted fst-italic fs-6 lh-lg mb-4">
+                "JoyLoop completely cured our living room panic. Before this, we had four storage bins overflowing with sixty blinking plastic toys that Leo ignored after forty-eight hours. Now, one curated wooden kit arrives on our rug. He sits in deep focus for forty-five minutes assembling the arches. When he masters it, it simply vanishes to another happy home. The mental calm is priceless."
+              </p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-dark fw-bold ms-2">Verified Subscriber</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-lg-6">
+            <div class="h2-voice-card">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <img src="assets/images/home2/parent-story-2.jpg" alt="Marcus Vance and daughter Maya" class="h2-voice-avatar">
+                <div>
+                  <h5 class="fw-bold text-dark mb-0">Marcus Vance</h5>
+                  <small class="text-muted d-block">Software Systems Lead & Father of Maya (5) &bull; San Francisco</small>
+                  <span class="badge bg-light-cyan text-secondary rounded-pill px-2 py-0 small mt-1">12 Toy Rotations Completed</span>
+                </div>
+              </div>
+              <p class="text-muted fst-italic fs-6 lh-lg mb-4">
+                "As an engineer, the physical craftsmanship blew me away. Real dovetail timber joints, perfectly smoothed beechwood, and zero synthetic odors. Maya watches for our delivery driver like clockwork on the first Monday of every month. It feels like Christmas twelve times a year, with zero plastic trash generated and zero clutter left behind."
+              </p>
+              <div class="d-flex align-items-center gap-1 text-warning small">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-dark fw-bold ms-2">Verified Subscriber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ZERO-COMMITMENT INVITATION BANNER -->
+    <section class="section-padding bg-white reveal-anim" id="invitation">
+      <div class="container">
+        <div class="h2-cta-banner text-center">
+          <div class="max-w-700 mx-auto">
+            <span class="badge bg-white text-dark rounded-pill fw-bold mb-4 shadow-sm h2-cta-badge">
+              <span class="d-inline-flex align-items-center"><i class="bi bi-shield-check text-success me-1"></i> 30-Day Happiness Guarantee</span>
+              <span class="h2-cta-badge-sep d-none d-sm-inline mx-1">&bull;</span>
+              <span class="d-inline-block">Cancel or Pause Anytime</span>
+            </span>
+            <h2 class="display-5 fw-extrabold text-white mb-3">
+              Give Your Child the World of Play.<br>
+              Give Your Home Its Calm Back.
+            </h2>
+            <p class="text-white-50 lead mb-5">
+              Select your child's developmental age stage, choose monthly or bi-monthly rotations, and receive your inaugural sanitized heirloom kit on your doorstep this week.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 h2-cta-btn-group">
+              <a href="plans.html" class="btn btn-light btn-lg rounded-pill px-4 px-md-5 py-3 fw-bold text-dark shadow-colored hover-lift">
+                Select Your Child's Edition <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a href="catalog.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 hover-lift">
+                Browse Full Catalog
+              </a>
+            </div>
+          </div>
+
+          <div class="h2-cta-glass-panel mx-auto">
+            <div class="h2-cta-features-list">
+              <div class="h2-cta-feature-item">
+                <span class="h2-feature-icon-box"><i class="bi bi-truck text-info"></i></span>
+                <span class="h2-feature-text">Free Doorstep Delivery</span>
+              </div>
+              <div class="h2-cta-feature-item">
+                <span class="h2-feature-icon-box"><i class="bi bi-arrow-repeat text-info"></i></span>
+                <span class="h2-feature-text">Unlimited Free Swaps</span>
+              </div>
+              <div class="h2-cta-feature-item">
+                <span class="h2-feature-icon-box"><i class="bi bi-shield-lock text-info"></i></span>
+                <span class="h2-feature-text">Zero Late or Damage Fees</span>
+              </div>
+              <div class="h2-cta-feature-item">
+                <span class="h2-feature-icon-box"><i class="bi bi-heart text-info"></i></span>
+                <span class="h2-feature-text">Keep Favorites at 30% Off</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 footer-widget pe-lg-5">
+          <a class="navbar-brand mb-4 d-inline-block" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+          <p>We are on a mission to make playtime sustainable, educational, and clutter-free. Join the circular economy of premium toys today.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="catalog.html">Toy Catalog</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="plans.html">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="hygiene.html">Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h4>Stay in the Loop</h4>
+          <p>Subscribe to get updates on new arrivals and exclusive offers.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-lg border-0 shadow-sm" placeholder="Your email address" aria-label="Email" style="border-radius: var(--radius-pill) 0 0 var(--radius-pill);">
+              <button class="btn btn-primary px-4" type="submit" style="border-radius: 0 var(--radius-pill) var(--radius-pill) 0;">
+                <i class="bi bi-send"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start">
+            <p class="mb-md-0">&copy; 2026 JoyLoop Toy Rentals. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</body>
+</html>

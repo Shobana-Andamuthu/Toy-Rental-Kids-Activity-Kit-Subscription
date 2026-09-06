@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoices & Billing | JoyLoop Parent Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dash-wrapper">
+        <header class="dash-topbar">
+      <div class="d-flex align-items-center gap-2">
+        <button class="dash-menu-btn d-lg-none" type="button" data-dash-open-sidebar aria-label="Open dashboard menu"><i class="bi bi-list"></i></button>
+        <a class="navbar-brand m-0" href="../index.html"><i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span></a>
+      </div>
+
+      <div class="dash-topbar-actions">
+        <button class="dash-control" type="button" data-theme-toggle aria-label="Switch to dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="dash-control dash-direction" type="button" data-direction-toggle aria-label="Switch to RTL"><span>LTR</span></button>
+        <a class="dash-topbar-link" href="../index.html"><i class="bi bi-arrow-up-right me-1"></i><span>Back to Site</span></a>
+        <button class="dash-topbar-link dash-logout text-danger" type="button" data-dashboard-logout><i class="bi bi-box-arrow-right me-1"></i><span>Log Out</span></button>
+      </div>
+    </header>
+
+    <!-- Mobile Dashboard Horizontal Scroll Menu (docked directly under navbar) -->
+    <nav class="dash-mobile-tabs" aria-label="Mobile Dashboard Navigation">
+      <div class="dash-mobile-tabs-inner">
+        <a href="index.html" class="dash-tab-btn "><i class="bi bi-grid"></i><span>Overview</span></a>
+        <a href="rentals.html" class="dash-tab-btn "><i class="bi bi-box-seam"></i><span>My Toys</span></a>
+        <a href="swap.html" class="dash-tab-btn "><i class="bi bi-arrow-left-right"></i><span>Swap</span></a>
+        <a href="catalog.html" class="dash-tab-btn "><i class="bi bi-compass"></i><span>Catalog</span></a>
+        <a href="billing.html" class="dash-tab-btn active"><i class="bi bi-receipt"></i><span>Billing</span></a>
+        <a href="profile.html" class="dash-tab-btn "><i class="bi bi-person-gear"></i><span>Profile</span></a>
+      </div>
+    </nav>
+
+    <!-- Sidebar Navigation -->
+    <aside class="dash-sidebar p-3" id="dashSidebar">
+      <div>
+        <div class="dash-sidebar-brand d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom px-2">
+          <a class="navbar-brand m-0 fs-4" href="../index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+          <button class="btn-close d-lg-none" id="closeSidebarBtn" aria-label="Close Sidebar"></button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 p-2 mb-4 bg-light-cyan rounded-3">
+          <img src="../assets/images/dashboard/parent-avatar.jpg" alt="Parent Avatar" class="rounded-circle object-fit-cover" style="width: 45px; height: 45px;">
+          <div>
+            <strong class="d-block text-dark small fw-bold">Sarah Jenkins</strong>
+            <small class="text-primary fw-bold" style="font-size: 0.75rem;">Play Plus Plan</small>
+          </div>
+        </div>
+
+        <nav class="nav flex-column">
+          <a class="nav-link" href="index.html"><i class="bi bi-grid"></i> Overview</a>
+          <a class="nav-link" href="rentals.html"><i class="bi bi-box-seam"></i> My Active Toys</a>
+          <a class="nav-link" href="swap.html"><i class="bi bi-arrow-left-right"></i> Swap Request</a>
+          <a class="nav-link" href="catalog.html"><i class="bi bi-compass"></i> Member Catalog</a>
+          <a class="nav-link active" href="billing.html"><i class="bi bi-receipt"></i> Invoices & Billing</a>
+          <a class="nav-link" href="profile.html"><i class="bi bi-person-gear"></i> Family Profile</a>
+        </nav>
+      </div>
+
+      <div class="pt-3 border-top px-2">
+        <span class="dash-sidebar-status small text-muted">JoyLoop member portal</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <div class="dash-legacy-mobile-header d-lg-none d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <button class="btn btn-light border" id="openSidebarBtn"><i class="bi bi-list fs-4"></i></button>
+        <a class="navbar-brand m-0" href="../index.html">
+          <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+        </a>
+        <a href="profile.html"><img src="../assets/images/dashboard/parent-avatar.jpg" class="rounded-circle object-fit-cover" style="width: 38px; height: 38px;"></a>
+      </div>
+
+      <div class="mb-4">
+        <h2 class="fw-bold text-dark mb-1">Invoices & Billing</h2>
+        <p class="text-muted mb-0">Manage your subscription payment methods, view past billing receipts, and download PDF invoices.</p>
+      </div>
+
+      <!-- Current Subscription & Payment Method Cards -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+          <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-dark mb-0">Active Subscription</h5>
+                <span class="badge bg-primary text-white rounded-pill">Active</span>
+              </div>
+              <h3 class="display-6 fw-bold text-primary mb-1">$49.00 <span class="fs-6 text-muted font-normal">/ month</span></h3>
+              <p class="fw-bold text-dark mb-1">Play Plus Plan (4 Toys per rotation)</p>
+              <small class="text-muted">Next billing renewal on <strong>October 15, 2026</strong></small>
+            </div>
+            <div class="mt-4 pt-3 border-top d-flex gap-2">
+              <a href="../plans.html" class="btn btn-outline-primary rounded-pill btn-sm">Change Plan</a>
+              <button class="btn btn-link btn-sm text-muted text-decoration-none" onclick="alert('Subscription paused until next month.')">Pause Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-dark mb-0">Payment Method</h5>
+                <span class="badge bg-light-cyan text-secondary border border-light-cyan rounded-pill">Default</span>
+              </div>
+              <div class="d-flex align-items-center gap-3 p-3 bg-light-blue rounded-3 border border-light-cyan mb-3">
+                <i class="bi bi-credit-card-2-front text-primary display-6"></i>
+                <div>
+                  <strong class="d-block text-dark">Visa ending in 4242</strong>
+                  <small class="text-muted">Expires 08 / 2028 • Default Billing Card</small>
+                </div>
+              </div>
+            </div>
+            <div class="pt-3 border-top">
+              <button class="btn btn-outline-primary rounded-pill btn-sm" onclick="alert('Payment method edit modal opened.')">Update Payment Method</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoices Table -->
+      <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan">
+        <h5 class="fw-bold text-dark mb-4"><i class="bi bi-receipt text-primary me-2"></i> Billing History & Invoices</h5>
+        
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead>
+              <tr class="text-uppercase small text-muted border-bottom">
+                <th scope="col" class="py-3">Invoice Number</th>
+                <th scope="col">Date Paid</th>
+                <th scope="col">Description</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="text-end">Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3"><strong class="text-dark">#INV-2026-0915</strong></td>
+                <td><span class="text-muted">Sep 15, 2026</span></td>
+                <td><span>Play Plus Monthly Subscription</span></td>
+                <td><strong class="text-dark">$49.00 USD</strong></td>
+                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Paid</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="alert('Downloading PDF Invoice #INV-2026-0915...')">
+                    <i class="bi bi-download me-1"></i> PDF
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="py-3"><strong class="text-dark">#INV-2026-0815</strong></td>
+                <td><span class="text-muted">Aug 15, 2026</span></td>
+                <td><span>Play Plus Monthly Subscription</span></td>
+                <td><strong class="text-dark">$49.00 USD</strong></td>
+                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Paid</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="alert('Downloading PDF Invoice #INV-2026-0815...')">
+                    <i class="bi bi-download me-1"></i> PDF
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="py-3"><strong class="text-dark">#INV-2026-0715</strong></td>
+                <td><span class="text-muted">Jul 15, 2026</span></td>
+                <td><span>Play Plus Monthly Subscription</span></td>
+                <td><strong class="text-dark">$49.00 USD</strong></td>
+                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Paid</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="alert('Downloading PDF Invoice #INV-2026-0715...')">
+                    <i class="bi bi-download me-1"></i> PDF
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openSidebarBtn');
+      const closeBtn = document.getElementById('closeSidebarBtn');
+      const sidebar = document.getElementById('dashSidebar');
+
+      if (openBtn && sidebar) openBtn.addEventListener('click', () => sidebar.classList.add('show'));
+      if (closeBtn && sidebar) closeBtn.addEventListener('click', () => sidebar.classList.remove('show'));
+    });
+  </script>
+</body>
+</html>

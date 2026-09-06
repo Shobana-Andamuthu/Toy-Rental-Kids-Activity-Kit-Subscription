@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Parent and child discovering a toy rental box</title>
+  <desc id="desc">A bright editorial illustration of a parent and child opening a JoyLoop toy box in a sunny playroom.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9fbff"/><stop offset="1" stop-color="#c7f0f2"/></linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08b6d2"/><stop offset="1" stop-color="#0e7490"/></linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4b6a7"/><stop offset="1" stop-color="#e78376"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <circle cx="1030" cy="145" r="86" fill="#fff" opacity=".7"/>
+  <path d="M0 720c180-75 330-80 480-8s320 74 720-22v210H0z" fill="#fff" opacity=".85"/>
+  <rect x="160" y="600" width="880" height="32" rx="16" fill="#0e7490" opacity=".16"/>
+  <ellipse cx="765" cy="645" rx="188" ry="38" fill="#0c1a2e" opacity=".12"/>
+  <path d="M660 350c-18-128 45-215 150-215 93 0 140 72 118 177l-34 178H700z" fill="url(#shirt)"/>
+  <circle cx="817" cy="180" r="72" fill="#f0ae86"/>
+  <path d="M746 164c18-82 128-105 166-11-40-22-87-20-166 11z" fill="#5b3d38"/>
+  <path d="M775 506c-46 52-56 132-18 190h-94c-5-79 4-155 43-229z" fill="#0e7490"/>
+  <path d="M949 494c74 57 100 120 102 202h-92c-22-71-50-122-95-175z" fill="#06b6d4"/>
+  <path d="M282 494c-18-93 22-167 92-167 80 0 112 78 85 178l-31 114H304z" fill="#ffd46f"/>
+  <circle cx="366" cy="306" r="55" fill="#b86f4d"/>
+  <path d="M316 302c5-73 104-75 113-1-39-22-75-21-113 1z" fill="#2f4b52"/>
+  <path d="M337 600l-42 130h71l26-130zM405 600l31 130h68l-42-130z" fill="#06b6d4"/>
+  <rect x="442" y="550" width="280" height="150" rx="12" fill="url(#box)"/>
+  <path d="m442 550 138 86 142-86" fill="#22d3ee" opacity=".8"/>
+  <path d="M580 636v64" stroke="#fff" stroke-width="6" opacity=".7"/>
+  <circle cx="493" cy="502" r="27" fill="#f5ca4f"/><circle cx="550" cy="480" r="20" fill="#e78376"/><path d="M620 504h58v37h-58z" fill="#fff" opacity=".9"/>
+  <text x="505" y="680" fill="#fff" font-family="Arial,sans-serif" font-size="28" font-weight="700">JOY LOOP</text>
+</svg>

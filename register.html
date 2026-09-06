@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Parent Account | JoyLoop Toy Rental</title>
+  <meta name="description" content="Join JoyLoop today! Create your parent account to curate educational toy boxes, start your monthly rotation, and eliminate living room clutter.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page">
+
+  <!-- Floating Theme & RTL Controls -->
+  <div class="auth-floating-controls">
+    <button class="nav-icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><i class="bi bi-moon-stars-fill"></i></button>
+    <button class="nav-toggle-btn" type="button" data-direction-toggle aria-label="Switch to RTL" title="Switch direction"><span>LTR</span></button>
+  </div>
+
+<main class="auth-split-layout">
+    <!-- Left Column: Form Side -->
+    <div class="auth-form-column">
+      <div class="auth-card-box">
+        <div class="mb-4">
+          <a href="index.html" class="navbar-brand d-inline-flex mb-3" aria-label="Return to JoyLoop Homepage">
+            <i class="bi bi-box-seam text-primary fs-3"></i> <span class="fs-4">Joy<span class="text-secondary">Loop</span></span>
+          </a>
+          <div>
+            <span class="badge bg-light-cyan text-secondary px-3 py-1 rounded-pill small fw-bold mb-2">Join the Loop</span>
+            <h1 class="h2 fw-bold text-dark mb-2">Create Your Account</h1>
+            <p class="text-muted small mb-0">Select your preferred subscription tier to start building your first customized monthly box.</p>
+          </div>
+        </div>
+
+        <form id="registerForm" novalidate>
+          <div class="mb-3">
+            <label for="rName" class="form-label fw-bold text-dark small">Parent Full Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person text-muted"></i></span>
+              <input type="text" class="form-control" id="rName" placeholder="Jane Smith" required autocomplete="name">
+              <div class="invalid-feedback">Please enter your full name.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="rEmail" class="form-label fw-bold text-dark small">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope text-muted"></i></span>
+              <input type="email" class="form-control" id="rEmail" placeholder="jane@example.com" required autocomplete="email">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="rAge" class="form-label fw-bold text-dark small">Child's Primary Age Stage</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-balloon text-muted"></i></span>
+              <select class="form-select" id="rAge" required>
+                <option value="">Select age bracket...</option>
+                <option value="0-12m">0 – 12 Months (Sensory Foundation)</option>
+                <option value="1-3y" selected>1 – 3 Years (Narrative & Stacking)</option>
+                <option value="3-5y">3 – 5 Years (STEM Logic & Mechanics)</option>
+                <option value="5-8y">5 – 8 Years (Kinetic Discovery & Physics)</option>
+              </select>
+              <div class="invalid-feedback">Please select your child's stage.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="rPlan" class="form-label fw-bold text-dark small">Preferred Membership Plan</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-box-seam text-muted"></i></span>
+              <select class="form-select" id="rPlan" required>
+                <option value="Discovery">Discovery Plan — 2 Toys / Bi-Monthly ($29/mo)</option>
+                <option value="Play Plus" selected>Play Plus — 4 Toys / Monthly Swap ($49/mo)</option>
+                <option value="Curator Elite">Curator Elite — 6 Toys / Anytime Swaps ($79/mo)</option>
+              </select>
+              <div class="invalid-feedback">Please select a plan.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="rPassword" class="form-label fw-bold text-dark small">Create Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-lock text-muted"></i></span>
+              <input type="password" class="form-control" id="rPassword" placeholder="Minimum 6 characters" required minlength="6" autocomplete="new-password">
+              <button class="btn btn-outline-secondary input-group-text" type="button" data-password-toggle="rPassword" aria-label="Toggle password visibility">
+                <i class="bi bi-eye"></i>
+              </button>
+              <div class="invalid-feedback">Password must be at least 6 characters.</div>
+            </div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="termsCheck" required checked>
+            <label class="form-check-label text-muted small" for="termsCheck">
+              I agree to the JoyLoop <a href="#" class="text-primary text-decoration-none">Terms of Service</a> and <a href="#" class="text-primary text-decoration-none">Zero-Late-Fee Policy</a>
+            </label>
+            <div class="invalid-feedback">You must agree before continuing.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 shadow-colored hover-lift mb-3 fw-bold">
+            Create Account & Start Play <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+
+          <p class="text-center text-muted small mb-0">
+            Already have an account? <a href="login.html" class="fw-bold text-primary text-decoration-none ms-1">Sign In</a>
+          </p>
+        </form>
+
+        <div class="mt-4 pt-3 border-top text-center">
+          <small class="text-muted d-block">&copy; 2026 JoyLoop Toy Rentals. Handcrafted with care.</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Bespoke Visual Side -->
+    <div class="auth-image-column">
+      <img src="assets/images/auth/register-auth.jpg" alt="Mother and toddler happily assembling an intricate wooden marble run from a circular subscription box" loading="eager">
+      <div class="auth-image-overlay">
+        <div>
+          <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold mb-3 shadow-sm">
+            <i class="bi bi-shield-check me-1"></i> Hospital UV-C Sanitized
+          </span>
+          <h2 class="display-6 fw-bold text-white mb-3">Welcome to the circular play revolution.</h2>
+          <p class="text-white-50 lead fs-6 mb-4">
+            Join over 15,000 conscious households saving an average of $1,420 annually while eliminating 84% of living room toy clutter.
+          </p>
+          <div class="row g-3 border-top border-white-subtle pt-3 text-white">
+            <div class="col-4">
+              <strong class="d-block fs-5 fw-bold text-info">100%</strong>
+              <small class="text-white-50">FSC Beechwood</small>
+            </div>
+            <div class="col-4 border-start border-white-subtle ps-3">
+              <strong class="d-block fs-5 fw-bold text-info">Zero</strong>
+              <small class="text-white-50">Late Return Fees</small>
+            </div>
+            <div class="col-4 border-start border-white-subtle ps-3">
+              <strong class="d-block fs-5 fw-bold text-info">Free</strong>
+              <small class="text-white-50">Doorstep Courier</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // URL param support for selecting plan
+      const urlParams = new URLSearchParams(window.location.search);
+      const planParam = urlParams.get('plan');
+      if (planParam) {
+        const planSelect = document.getElementById('rPlan');
+        if (planSelect) {
+          for (let i = 0; i < planSelect.options.length; i++) {
+            if (planSelect.options[i].value.toLowerCase().includes(planParam.toLowerCase())) {
+              planSelect.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+
+      const form = document.getElementById('registerForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add('was-validated');
+          } else {
+            localStorage.setItem('joyloop-session', 'active');
+            window.location.href = 'dashboard/index.html';
+          }
+        });
+      }
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</body>
+</html>

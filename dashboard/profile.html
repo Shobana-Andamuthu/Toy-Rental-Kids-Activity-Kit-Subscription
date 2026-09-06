@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Profile & Preferences | JoyLoop Parent Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dash-wrapper">
+        <header class="dash-topbar">
+      <div class="d-flex align-items-center gap-2">
+        <button class="dash-menu-btn d-lg-none" type="button" data-dash-open-sidebar aria-label="Open dashboard menu"><i class="bi bi-list"></i></button>
+        <a class="navbar-brand m-0" href="../index.html"><i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span></a>
+      </div>
+
+      <div class="dash-topbar-actions">
+        <button class="dash-control" type="button" data-theme-toggle aria-label="Switch to dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="dash-control dash-direction" type="button" data-direction-toggle aria-label="Switch to RTL"><span>LTR</span></button>
+        <a class="dash-topbar-link" href="../index.html"><i class="bi bi-arrow-up-right me-1"></i><span>Back to Site</span></a>
+        <button class="dash-topbar-link dash-logout text-danger" type="button" data-dashboard-logout><i class="bi bi-box-arrow-right me-1"></i><span>Log Out</span></button>
+      </div>
+    </header>
+
+    <!-- Mobile Dashboard Horizontal Scroll Menu (docked directly under navbar) -->
+    <nav class="dash-mobile-tabs" aria-label="Mobile Dashboard Navigation">
+      <div class="dash-mobile-tabs-inner">
+        <a href="index.html" class="dash-tab-btn "><i class="bi bi-grid"></i><span>Overview</span></a>
+        <a href="rentals.html" class="dash-tab-btn "><i class="bi bi-box-seam"></i><span>My Toys</span></a>
+        <a href="swap.html" class="dash-tab-btn "><i class="bi bi-arrow-left-right"></i><span>Swap</span></a>
+        <a href="catalog.html" class="dash-tab-btn "><i class="bi bi-compass"></i><span>Catalog</span></a>
+        <a href="billing.html" class="dash-tab-btn "><i class="bi bi-receipt"></i><span>Billing</span></a>
+        <a href="profile.html" class="dash-tab-btn active"><i class="bi bi-person-gear"></i><span>Profile</span></a>
+      </div>
+    </nav>
+
+    <!-- Sidebar Navigation -->
+    <aside class="dash-sidebar p-3" id="dashSidebar">
+      <div>
+        <div class="dash-sidebar-brand d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom px-2">
+          <a class="navbar-brand m-0 fs-4" href="../index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+          <button class="btn-close d-lg-none" id="closeSidebarBtn" aria-label="Close Sidebar"></button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 p-2 mb-4 bg-light-cyan rounded-3">
+          <img src="../assets/images/dashboard/parent-avatar.jpg" alt="Parent Avatar" class="rounded-circle object-fit-cover" style="width: 45px; height: 45px;">
+          <div>
+            <strong class="d-block text-dark small fw-bold">Sarah Jenkins</strong>
+            <small class="text-primary fw-bold" style="font-size: 0.75rem;">Play Plus Plan</small>
+          </div>
+        </div>
+
+        <nav class="nav flex-column">
+          <a class="nav-link" href="index.html"><i class="bi bi-grid"></i> Overview</a>
+          <a class="nav-link" href="rentals.html"><i class="bi bi-box-seam"></i> My Active Toys</a>
+          <a class="nav-link" href="swap.html"><i class="bi bi-arrow-left-right"></i> Swap Request</a>
+          <a class="nav-link" href="catalog.html"><i class="bi bi-compass"></i> Member Catalog</a>
+          <a class="nav-link" href="billing.html"><i class="bi bi-receipt"></i> Invoices & Billing</a>
+          <a class="nav-link active" href="profile.html"><i class="bi bi-person-gear"></i> Family Profile</a>
+        </nav>
+      </div>
+
+      <div class="pt-3 border-top px-2">
+        <span class="dash-sidebar-status small text-muted">JoyLoop member portal</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <div class="dash-legacy-mobile-header d-lg-none d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <button class="btn btn-light border" id="openSidebarBtn"><i class="bi bi-list fs-4"></i></button>
+        <a class="navbar-brand m-0" href="../index.html">
+          <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+        </a>
+        <a href="profile.html"><img src="../assets/images/dashboard/parent-avatar.jpg" class="rounded-circle object-fit-cover" style="width: 38px; height: 38px;"></a>
+      </div>
+
+      <div class="mb-4">
+        <h2 class="fw-bold text-dark mb-1">Family Profile & Preferences</h2>
+        <p class="text-muted mb-0">Update parent information, child developmental milestones, and shipping preferences.</p>
+      </div>
+
+      <div id="profileSavedAlert" class="alert alert-success rounded-3 d-none mb-4" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i> <strong>Profile Saved!</strong> Your family preferences have been updated for future toy rotations.
+      </div>
+
+      <form id="profileForm">
+        <div class="row g-4 mb-4">
+          <!-- Parent Information -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan h-100">
+              <h5 class="fw-bold text-dark mb-3"><i class="bi bi-person text-primary me-2"></i> Parent Details</h5>
+              
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Parent Name</label>
+                <input type="text" class="form-control rounded-3" value="Sarah Jenkins" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Email Address</label>
+                <input type="email" class="form-control rounded-3" value="sarah.jenkins@example.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Phone Number</label>
+                <input type="tel" class="form-control rounded-3" value="+1 (555) 234-5678">
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Profile & Milestones -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan h-100">
+              <h5 class="fw-bold text-dark mb-3"><i class="bi bi-balloon text-secondary me-2"></i> Child Profile</h5>
+              
+              <div class="d-flex align-items-center gap-3 mb-3 p-2 bg-light-blue rounded-3 border border-light-cyan">
+                <img src="../assets/images/dashboard/child-avatar.jpg" alt="Child Avatar" class="rounded-circle object-fit-cover" style="width: 50px; height: 50px;">
+                <div>
+                  <strong class="d-block text-dark">Leo Jenkins</strong>
+                  <small class="text-muted">Age 4 • Born Oct 2022</small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Developmental Age Group</label>
+                <select class="form-select rounded-3">
+                  <option value="0-2">0 – 2 Years (Sensory)</option>
+                  <option value="3-5" selected>3 – 5 Years (Toddler Explorer)</option>
+                  <option value="6-8">6 – 8 Years (Early Builder)</option>
+                  <option value="9-12">9 – 12 Years (Architecture)</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark d-block">Preferred Toy Categories</label>
+                <div class="d-flex flex-wrap gap-2">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="prefEdu" checked>
+                    <label class="form-check-label small" for="prefEdu">Educational</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="prefSTEM" checked>
+                    <label class="form-check-label small" for="prefSTEM">STEM & Robotics</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="prefPretend">
+                    <label class="form-check-label small" for="prefPretend">Pretend Play</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Address Card -->
+        <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan mb-4">
+          <h5 class="fw-bold text-dark mb-3"><i class="bi bi-geo-alt text-primary me-2"></i> Monthly Delivery Address</h5>
+          <div class="row g-3">
+            <div class="col-md-8">
+              <label class="form-label small fw-bold text-dark">Street Address</label>
+              <input type="text" class="form-control rounded-3" value="450 Ocean View Lane, Apt 4B">
+            </div>
+            <div class="col-md-4">
+              <div class="row g-2">
+                <div class="col-6">
+                  <label class="form-label small fw-bold text-dark">City</label>
+                  <input type="text" class="form-control rounded-3" value="San Francisco">
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-bold text-dark">ZIP Code</label>
+                  <input type="text" class="form-control rounded-3" value="94107">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 shadow-colored hover-lift">Save Changes</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openSidebarBtn');
+      const closeBtn = document.getElementById('closeSidebarBtn');
+      const sidebar = document.getElementById('dashSidebar');
+      const form = document.getElementById('profileForm');
+      const alert = document.getElementById('profileSavedAlert');
+
+      if (openBtn && sidebar) openBtn.addEventListener('click', () => sidebar.classList.add('show'));
+      if (closeBtn && sidebar) closeBtn.addEventListener('click', () => sidebar.classList.remove('show'));
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert.classList.remove('d-none');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

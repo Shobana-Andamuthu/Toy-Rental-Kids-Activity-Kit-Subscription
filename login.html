@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Portal Login | JoyLoop Toy Rental</title>
+  <meta name="description" content="Sign in to your JoyLoop parent portal to curate next month's toy box, manage active rentals, and track deliveries.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page">
+
+  <!-- Floating Theme & RTL Controls -->
+  <div class="auth-floating-controls">
+    <button class="nav-icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><i class="bi bi-moon-stars-fill"></i></button>
+    <button class="nav-toggle-btn" type="button" data-direction-toggle aria-label="Switch to RTL" title="Switch direction"><span>LTR</span></button>
+  </div>
+
+<main class="auth-split-layout">
+    <!-- Left Column: Bespoke Visual Side -->
+    <div class="auth-image-column">
+      <img src="assets/images/auth/login-auth.jpg" alt="Joyful child playing with pastel Montessori blocks in a sunlit Scandinavian nursery" loading="eager">
+      <div class="auth-image-overlay">
+        <div>
+          <span class="badge bg-white text-dark rounded-pill px-3 py-2 fw-bold mb-3 shadow-sm">
+            <i class="bi bi-stars text-primary me-1"></i> The Playroom Journal
+          </span>
+          <h2 class="display-6 fw-bold text-white mb-3">Endless curiosity without living room clutter.</h2>
+          <blockquote class="fs-6 fst-italic text-white-50 mb-3">
+            "JoyLoop turned our chaotic living room into a peaceful discovery zone. Leo plays with deep focus, and swapping when he's ready is effortless."
+          </blockquote>
+          <div class="d-flex align-items-center gap-2">
+            <div class="stars text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <span class="small fw-bold text-white">— Sarah Jenkins, Member (14 Rotations)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Form Side -->
+    <div class="auth-form-column">
+      <div class="auth-card-box">
+        <div class="mb-4">
+          <a href="index.html" class="navbar-brand d-inline-flex mb-3" aria-label="Return to JoyLoop Homepage">
+            <i class="bi bi-box-seam text-primary fs-3"></i> <span class="fs-4">Joy<span class="text-secondary">Loop</span></span>
+          </a>
+          <div>
+            <span class="badge bg-light-cyan text-secondary px-3 py-1 rounded-pill small fw-bold mb-2">Member Portal</span>
+            <h1 class="h2 fw-bold text-dark mb-2">Welcome Back</h1>
+            <p class="text-muted small mb-0">Sign in to manage active rentals, request swaps, or explore new arrivals.</p>
+          </div>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="lEmail" class="form-label fw-bold text-dark small">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope text-muted"></i></span>
+              <input type="email" class="form-control" id="lEmail" placeholder="parent@example.com" value="sarah.jenkins@example.com" required autocomplete="email">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label for="lPassword" class="form-label fw-bold text-dark small mb-0">Password</label>
+              <a href="#" class="small text-primary text-decoration-none">Forgot password?</a>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-lock text-muted"></i></span>
+              <input type="password" class="form-control" id="lPassword" placeholder="••••••••" value="password123" required minlength="6" autocomplete="current-password">
+              <button class="btn btn-outline-secondary input-group-text" type="button" data-password-toggle="lPassword" aria-label="Toggle password visibility">
+                <i class="bi bi-eye"></i>
+              </button>
+              <div class="invalid-feedback">Password must be at least 6 characters.</div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="form-check mb-0">
+              <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+              <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+            </div>
+            <span class="badge bg-light-cyan text-secondary small rounded-pill">Demo Ready</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 shadow-colored hover-lift mb-3 fw-bold">
+            Sign In to Dashboard <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+
+          <p class="text-center text-muted small mb-0">
+            Don't have an account yet? <a href="register.html" class="fw-bold text-primary text-decoration-none ms-1">Create an Account</a>
+          </p>
+        </form>
+
+        <div class="mt-5 pt-4 border-top text-center">
+          <small class="text-muted d-block">&copy; 2026 JoyLoop Toy Rentals. Handcrafted with care.</small>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add('was-validated');
+          } else {
+            localStorage.setItem('joyloop-session', 'active');
+            window.location.href = 'dashboard/index.html';
+          }
+        });
+      }
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoyLoop | Premium Toy Rental Catalog</title>
+  <meta name="description" content="Explore JoyLoop's curated library of premium, sanitized educational toys and activity kits for ages 0 to 12. Filter by age, category, and developmental goals.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="catalog-page">
+  <!-- Modern Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader-inner">
+      <div class="loader-spinner-ring">
+        <i class="bi bi-box-seam text-primary fs-3"></i>
+      </div>
+      <div class="loader-brand-text">Joy<span>Loop</span></div>
+      <div class="loader-progress-bar"><div class="loader-progress-val"></div></div>
+    </div>
+  </div>
+
+    <!-- Header -->
+  <header class="site-header">
+    <div class="nav-shell">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        <div class="navbar-inner">
+          <a class="navbar-brand" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+
+          <div class="nav-menu d-none d-xl-flex">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home <i class="bi bi-chevron-down nav-caret"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                  <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalog</a></li>
+              <li class="nav-item"><a class="nav-link" href="plans.html">Plans</a></li>
+              <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="hygiene.html">Hygiene</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-actions d-none d-xl-flex">
+            <button class="nav-icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><i class="bi bi-moon-stars-fill"></i> <span class="theme-label">Dark</span></button>
+            <button class="nav-toggle-btn" type="button" data-direction-toggle aria-label="Switch to RTL" title="Switch direction"><span>RTL</span></button>
+            <a href="login.html" class="btn btn-sm btn-nav-login">Login</a>
+          </div>
+
+          <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Off-canvas Navigation -->
+  <div class="offcanvas offcanvas-end mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <a class="navbar-brand m-0" href="index.html" id="mobileNavLabel">
+        <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="mobile-nav-list list-unstyled">
+        <li><a class="" href="index.html">Home 1</a></li>
+        <li><a class="" href="home-2.html">Home 2</a></li>
+        <li><a class="" href="how-it-works.html">How It Works</a></li>
+        <li><a class="active" href="catalog.html">Catalog</a></li>
+        <li><a class="" href="plans.html">Plans</a></li>
+        <li><a class="" href="hygiene.html">Hygiene</a></li>
+        <li><a class="" href="about.html">About</a></li>
+        <li><a class="" href="contact.html">Contact</a></li>
+        <li><a href="dashboard/index.html">Dashboard</a></li>
+      </ul>
+      <div class="mobile-nav-actions mt-auto pt-4 border-top">
+        <button class="btn btn-outline-secondary w-100 mb-2" type="button" data-theme-toggle><i class="bi bi-moon-stars-fill me-2"></i>Light / Dark</button>
+        <button class="btn btn-outline-secondary w-100 mb-3" type="button" data-direction-toggle><i class="bi bi-text-paragraph me-2"></i><span>RTL / LTR</span></button>
+        <a href="login.html" class="btn btn-primary w-100">Login to Portal</a>
+      </div>
+    </div>
+  </div>
+
+<main class="pt-5 mt-4">
+    <!-- Catalog Header Banner -->
+    <section class="bg-light-blue py-5 border-bottom border-light-cyan catalog-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-2 fw-bold">Library Catalog</span>
+            <h1 class="display-4 fw-bold text-dark mb-2">Explore Our Toy Library</h1>
+            <p class="lead text-muted mb-0">Hand-selected, sanitized, and developmental-stage appropriate toys available for your next monthly box swap.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <div class="bg-white p-3 rounded-4 shadow-sm border border-light-cyan d-inline-block text-start">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-shield-check text-primary fs-1"></i>
+                <div>
+                  <strong class="d-block text-dark">Hospital-Grade Clean</strong>
+                  <small class="text-muted">UV-C Sterilized & Sanitized</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Interface -->
+    <section class="section-padding py-5">
+      <div class="container">
+        <!-- 1. Full-Width Top Controls Bar -->
+        <div id="catalogTopBar" class="d-flex flex-wrap justify-content-between align-items-center mb-4 p-3 px-4 bg-white rounded-4 shadow-sm border border-light-cyan gap-3 w-100">
+          <div>
+            <span id="resultsCount" class="fw-bold text-dark fs-6">Showing 1–3 of 9 items</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <label for="sortSelect" class="form-label mb-0 small text-muted text-nowrap fw-bold">Sort By:</label>
+            <select id="sortSelect" class="form-select form-select-sm border-light-cyan rounded-pill px-3">
+              <option value="featured">Featured First</option>
+              <option value="name-asc">Name (A – Z)</option>
+              <option value="age-asc">Age (Youngest First)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 2. Main Row: Filters Box on Left, Product Cards on Right -->
+        <div class="row g-4 align-items-stretch catalog-cards-row">
+          <!-- Sidebar Filters -->
+          <div class="col-lg-3 d-flex flex-column">
+            <div class="filter-sidebar bg-white p-4 rounded-4 shadow-sm border border-light-cyan h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                  <h5 class="fw-bold text-dark mb-0"><i class="bi bi-sliders text-primary me-2"></i> Filters</h5>
+                  <button type="button" id="clearFiltersBtn" class="btn btn-link btn-sm text-primary p-0 text-decoration-none fw-bold">Clear All</button>
+                </div>
+
+                <!-- Search Filter -->
+                <div class="mb-4">
+                  <label for="searchInput" class="form-label fw-bold text-dark small text-uppercase">Search Toys</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-search text-muted"></i></span>
+                    <input type="text" id="searchInput" class="form-control bg-light border-start-0" placeholder="Robot, stacker, puzzle...">
+                  </div>
+                </div>
+
+                <!-- Age Filter (Single-Choice Radio) -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold text-dark small text-uppercase d-block mb-3">Age Bracket</label>
+                  <div class="d-flex flex-column gap-3" id="ageFilters">
+                    <div class="form-check">
+                      <input class="form-check-input age-filter" type="radio" name="ageFilter" value="all" id="ageAll" checked>
+                      <label class="form-check-label text-secondary fw-semibold" for="ageAll">All Ages</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input age-filter" type="radio" name="ageFilter" value="0-2" id="age02">
+                      <label class="form-check-label text-secondary fw-semibold" for="age02">0–2 Years</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input age-filter" type="radio" name="ageFilter" value="3-5" id="age35">
+                      <label class="form-check-label text-secondary fw-semibold" for="age35">3–5 Years</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input age-filter" type="radio" name="ageFilter" value="6-8" id="age68">
+                      <label class="form-check-label text-secondary fw-semibold" for="age68">6–8 Years</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Availability Filter -->
+              <div class="mt-auto pt-3 border-top">
+                <div class="form-check form-switch m-0">
+                  <input class="form-check-input" type="checkbox" id="availableOnlyToggle">
+                  <label class="form-check-label fw-bold text-dark small text-uppercase" for="availableOnlyToggle">In Stock Only</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid Column -->
+          <div class="col-lg-9 d-flex flex-column">
+            <!-- Products Container -->
+            <div class="row g-4 h-100 align-items-stretch" id="productsGrid">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="noResults" class="text-center py-5 d-none">
+              <i class="bi bi-search text-muted display-1"></i>
+              <h4 class="fw-bold text-dark mt-3">No toys match your criteria</h4>
+              <p class="text-muted">Try clearing some filters or searching for another keyword.</p>
+              <button id="resetSearchBtn" class="btn btn-outline-primary rounded-pill px-4 mt-2">Reset All Filters</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Catalog Pagination (Centered below both columns) -->
+        <nav aria-label="Catalog pagination" class="d-flex justify-content-center mt-5" id="catalogPaginationNav">
+          <ul class="pagination pagination-rounded gap-2 mb-0" id="catalogPagination">
+            <!-- Rendered via JS -->
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="section-padding bg-light-blue reveal-anim"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-6"><span class="badge bg-secondary text-white rounded-pill px-3 py-2 mb-3">Find The Right Fit</span><h2>Start with the way your child already plays.</h2><p class="text-muted">Our curators use age, interests, and current skill-building goals to narrow a library of hundreds of options into a box that feels personal.</p></div><div class="col-lg-6"><div class="p-4 bg-white rounded-4 shadow-sm"><div class="d-flex justify-content-between border-bottom py-3"><span>Age & stage</span><i class="bi bi-check-circle-fill text-primary"></i></div><div class="d-flex justify-content-between border-bottom py-3"><span>Play style</span><i class="bi bi-check-circle-fill text-primary"></i></div><div class="d-flex justify-content-between py-3"><span>Space at home</span><i class="bi bi-check-circle-fill text-primary"></i></div></div></div></div></div></section>
+    <section class="section-padding reveal-anim"><div class="container"><div class="row g-3 align-items-stretch"><div class="col-lg-8"><div class="p-5 bg-dark text-white rounded-4 h-100"><span class="text-accent fw-bold">A library that grows with them</span><h2 class="text-white mt-3">From first grasp to first big idea.</h2><p class="text-white-50">Rotate from sensory textures to engineering challenges without starting your search from zero.</p></div></div><div class="col-lg-4"><div class="p-4 bg-light-blue rounded-4 h-100"><i class="bi bi-search-heart text-secondary fs-2"></i><h4 class="mt-3">Save your discoveries</h4><p class="small text-muted mb-0">Bookmark a future box whenever a toy sparks a new interest.</p></div></div></div></div></section>
+    <section class="section-padding bg-light-blue reveal-anim"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><div class="d-flex gap-4 align-items-start"><div class="display-4 text-primary fw-bold">01</div><div><h3>Choose one curiosity.</h3><p class="text-muted">Pick a category, tell us what is landing at home, and let the catalog do the sorting. Your next rotation stays flexible until it ships.</p><a href="plans.html" class="btn btn-primary">Build a box</a></div></div></div></div></div></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 footer-widget pe-lg-5">
+          <a class="navbar-brand mb-4 d-inline-block" href="index.html">
+            <i class="bi bi-box-seam text-primary"></i> Joy<span>Loop</span>
+          </a>
+          <p>We are on a mission to make playtime sustainable, educational, and clutter-free. Join the circular economy of premium toys today.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="catalog.html">Toy Catalog</a></li>
+            <li><a href="plans.html">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="hygiene.html">Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h4>Newsletter</h4>
+          <p>Subscribe for new arrival alerts.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control border-0 shadow-sm" placeholder="Your email address">
+              <button class="btn btn-primary px-4" type="submit"><i class="bi bi-send"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center pt-4 mt-4 border-top">
+        <p class="mb-0">&copy; 2026 JoyLoop Toy Rentals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Product Data Array with 9 Unique Items (3 Ages x 3 Categories)
+    const PRODUCTS_DATA = [
+      // 0–2 Years
+      { id: 1, name: "Organic Cotton Bunny Rattle & Teether", age: "0-2", ageLabel: "0–2 Years", ageSort: 0, category: "Educational", image: "assets/images/products/p1.jpg", available: true, desc: "High-contrast tactile organic cotton rattle and smooth maple wood teether." },
+      { id: 2, name: "Little Doctor Medical Soft Pretend Kit", age: "0-2", ageLabel: "0–2 Years", ageSort: 0, category: "Pretend Play", image: "assets/images/products/p8.jpg", available: true, desc: "Soft fabric stethoscope, plush thermometer, and doctor kit for early empathetic play." },
+      { id: 3, name: "Sensory Wooden Push Wagon & Balance Walker", age: "0-2", ageLabel: "0–2 Years", ageSort: 0, category: "Outdoor", image: "assets/images/products/p2.jpg", available: true, desc: "Sturdy wooden push walker with soft rubber wheels for active first steps and balance discovery." },
+
+      // 3–5 Years
+      { id: 4, name: "Pastel Wooden Ring Stacker & Logic Arch", age: "3-5", ageLabel: "3–5 Years", ageSort: 3, category: "Educational", image: "assets/images/products/p9.jpg", available: true, desc: "Vibrant wooden arch sorting tray with numbered tactile stacking blocks that inspire early spatial reasoning." },
+      { id: 5, name: "Handcrafted Wooden Pretend Dollhouse", age: "3-5", ageLabel: "3–5 Years", ageSort: 3, category: "Pretend Play", image: "assets/images/products/p3.jpg", available: true, desc: "Open-ended wooden dollhouse with miniature furniture for rich narrative and cooperative play." },
+      { id: 6, name: "Ergonomic Active 3-Wheel Balance Scooter", age: "3-5", ageLabel: "3–5 Years", ageSort: 3, category: "Outdoor", image: "assets/images/products/p4.jpg", available: true, desc: "Adjustable 3-wheel outdoor balance scooter designed for physical agility and riding confidence." },
+
+      // 6–8 Years
+      { id: 7, name: "Interactive STEM & Robotics Coding Companion", age: "6-8", ageLabel: "6–8 Years", ageSort: 6, category: "Educational", image: "assets/images/products/p5.jpg", available: true, desc: "Programmable coding robot companion with light-up matrix screen and logic obstacle challenge cards." },
+      { id: 8, name: "Woodland Wildlife Adventure Pretend Play Set", age: "6-8", ageLabel: "6–8 Years", ageSort: 6, category: "Pretend Play", image: "assets/images/products/p6.jpg", available: true, desc: "Detailed handcrafted wooden wildlife figures, expedition terrain, and creative explorer scenario maps." },
+      { id: 9, name: "Kinetic Aerodynamic Wooden Glider & Launcher", age: "6-8", ageLabel: "6–8 Years", ageSort: 6, category: "Outdoor", image: "assets/images/products/p7.jpg", available: true, desc: "Precision aerodynamic beechwood glider with launch slingshot for outdoor trajectory physics." }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('productsGrid');
+      const countEl = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      const searchInput = document.getElementById('searchInput');
+      const sortSelect = document.getElementById('sortSelect');
+      const clearBtn = document.getElementById('clearFiltersBtn');
+      const resetBtn = document.getElementById('resetSearchBtn');
+      const availableOnlyToggle = document.getElementById('availableOnlyToggle');
+      const paginationNav = document.getElementById('catalogPaginationNav');
+      const paginationEl = document.getElementById('catalogPagination');
+
+      const ITEMS_PER_PAGE = 3;
+      let currentPage = 1;
+      let currentFiltered = [...PRODUCTS_DATA];
+
+      function renderProducts(items, page = 1) {
+        grid.innerHTML = '';
+        currentPage = page;
+
+        if (items.length === 0) {
+          noResults.classList.remove('d-none');
+          countEl.textContent = 'Showing 0 items';
+          paginationNav.classList.add('d-none');
+          return;
+        }
+        noResults.classList.add('d-none');
+
+        const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+        const startIndex = (page - 1) * ITEMS_PER_PAGE;
+        const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, items.length);
+        const pageItems = items.slice(startIndex, endIndex);
+
+        countEl.textContent = `Showing ${startIndex + 1}–${endIndex} of ${items.length} items`;
+
+        pageItems.forEach(product => {
+          const col = document.createElement('div');
+          col.className = 'col-md-6 col-lg-4 d-flex';
+          col.innerHTML = `
+            <div class="card-soft h-100 w-100 p-0 border border-light-cyan rounded-4 shadow-sm overflow-hidden d-flex flex-column justify-content-between hover-lift">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="position-relative overflow-hidden card-img-wrapper" style="height: 205px;">
+                  <img src="${product.image}" alt="${product.name}" class="w-100 h-100 object-fit-cover img-hover-zoom">
+                  <span class="badge bg-primary text-white position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fs-7">
+                    ${product.ageLabel}
+                  </span>
+                  <span class="badge bg-white text-secondary position-absolute top-0 end-0 m-3 px-2 py-1 rounded-pill shadow-sm border small fw-bold">
+                    ${product.category}
+                  </span>
+                </div>
+                <div class="p-3 p-xl-4 d-flex flex-column flex-grow-1">
+                  <h5 class="fw-bold text-dark mb-2 card-title-clamped">${product.name}</h5>
+                  <p class="small text-muted mb-3 card-desc-clamped">${product.desc}</p>
+                  <div class="d-flex align-items-center gap-2 mt-auto mb-2 card-stock-badge">
+                    <span class="badge-dot bg-success"></span>
+                    <small class="text-success fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Available Now</small>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 p-xl-4 pt-0 mt-auto card-action-wrap">
+                <a href="product-details.html?id=${product.id}" class="btn btn-outline-primary w-100 rounded-pill hover-lift">
+                  View Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          `;
+          grid.appendChild(col);
+        });
+
+        renderPagination(totalPages, page);
+        syncFilterCardHeight();
+        setTimeout(syncFilterCardHeight, 60);
+      }
+
+      function syncFilterCardHeight() {
+        const sidebar = document.querySelector('.filter-sidebar');
+        if (!sidebar) return;
+        if (window.innerWidth >= 992) {
+          const card = grid.querySelector('.card-soft');
+          if (card && card.offsetHeight > 180) {
+            const h = card.offsetHeight;
+            sidebar.style.minHeight = h + 'px';
+            sidebar.style.height = h + 'px';
+            sidebar.style.maxHeight = h + 'px';
+            return;
+          }
+        }
+        sidebar.style.minHeight = '';
+        sidebar.style.height = '';
+        sidebar.style.maxHeight = '';
+      }
+
+      window.addEventListener('resize', syncFilterCardHeight);
+      window.addEventListener('load', syncFilterCardHeight);
+
+      function renderPagination(totalPages, activePage) {
+        paginationEl.innerHTML = '';
+        if (totalPages <= 1) {
+          paginationNav.classList.add('d-none');
+          return;
+        }
+        paginationNav.classList.remove('d-none');
+
+        // Prev Button
+        const prevLi = document.createElement('li');
+        prevLi.className = `page-item ${activePage === 1 ? 'disabled' : ''}`;
+        prevLi.innerHTML = `<button class="page-link" type="button" aria-label="Previous page"><i class="bi bi-chevron-left"></i></button>`;
+        prevLi.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (activePage > 1) {
+            renderProducts(currentFiltered, activePage - 1);
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+        paginationEl.appendChild(prevLi);
+
+        // Numbered Buttons
+        for (let i = 1; i <= totalPages; i++) {
+          const pageLi = document.createElement('li');
+          pageLi.className = `page-item ${i === activePage ? 'active' : ''}`;
+          pageLi.innerHTML = `<button class="page-link" type="button">${i}</button>`;
+          pageLi.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (i !== activePage) {
+              renderProducts(currentFiltered, i);
+              grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+          paginationEl.appendChild(pageLi);
+        }
+
+        // Next Button
+        const nextLi = document.createElement('li');
+        nextLi.className = `page-item ${activePage === totalPages ? 'disabled' : ''}`;
+        nextLi.innerHTML = `<button class="page-link" type="button" aria-label="Next page"><i class="bi bi-chevron-right"></i></button>`;
+        nextLi.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (activePage < totalPages) {
+            renderProducts(currentFiltered, activePage + 1);
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+        paginationEl.appendChild(nextLi);
+      }
+
+      function filterAndSort() {
+        const query = searchInput.value.toLowerCase().trim();
+        const selectedAge = document.querySelector('input[name="ageFilter"]:checked')?.value || 'all';
+        const inStockOnly = availableOnlyToggle.checked;
+        const sortVal = sortSelect.value;
+
+        let filtered = PRODUCTS_DATA.filter(p => {
+          // Search query
+          if (query && !p.name.toLowerCase().includes(query) && !p.category.toLowerCase().includes(query) && !p.desc.toLowerCase().includes(query)) {
+            return false;
+          }
+          // Stock toggle
+          if (inStockOnly && !p.available) {
+            return false;
+          }
+          // Age filter
+          if (selectedAge !== 'all' && p.age !== selectedAge) {
+            return false;
+          }
+          return true;
+        });
+
+        // Sorting logic
+        if (sortVal === 'name-asc') {
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (sortVal === 'age-asc') {
+          filtered.sort((a, b) => a.ageSort - b.ageSort);
+        }
+
+        currentFiltered = filtered;
+        renderProducts(currentFiltered, 1);
+      }
+
+      // Event listeners
+      searchInput.addEventListener('input', filterAndSort);
+      sortSelect.addEventListener('change', filterAndSort);
+      availableOnlyToggle.addEventListener('change', filterAndSort);
+      document.querySelectorAll('input[name="ageFilter"]').forEach(radio => {
+        radio.addEventListener('change', filterAndSort);
+      });
+
+      function resetAll() {
+        searchInput.value = '';
+        sortSelect.value = 'featured';
+        availableOnlyToggle.checked = false;
+        const ageAll = document.getElementById('ageAll');
+        if (ageAll) ageAll.checked = true;
+        filterAndSort();
+      }
+
+      if (clearBtn) clearBtn.addEventListener('click', resetAll);
+      if (resetBtn) resetBtn.addEventListener('click', resetAll);
+
+      // Initial Render with Page 1
+      currentFiltered = [...PRODUCTS_DATA];
+      renderProducts(currentFiltered, 1);
+    });
+  </script>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</body>
+</html>
