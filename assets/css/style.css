@@ -2356,10 +2356,10 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
 .dash-sidebar-brand { display: none !important; min-height: 48px; }
 .dash-sidebar-status { display: block; text-align: center; }
 .dash-legacy-mobile-header { display: none !important; }
-.dash-sidebar { width: 260px; background: #FFFFFF; border-right: 1px solid var(--clr-border); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; position: sticky; top: 76px; height: calc(100vh - 76px); z-index: 100; transition: var(--transition-normal); }
+.dash-sidebar { width: 260px; background: #FFFFFF; border-right: 1px solid var(--clr-border); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; position: fixed; top: 76px; bottom: 0; left: 0; height: auto; overflow-y: auto; z-index: 100; transition: var(--transition-normal); }
 .dash-sidebar .nav-link { color: var(--clr-dark); font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 12px; margin-bottom: 0.25rem; transition: var(--transition-normal); display: flex; align-items: center; gap: 0.75rem; }
 .dash-sidebar .nav-link:hover, .dash-sidebar .nav-link.active { background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(14, 116, 144, 0.08)); color: var(--clr-secondary); font-weight: 700; }
-.dash-main { flex: 1 1 0; min-width: 0; max-width: 1400px; margin: 0; padding: 2rem 24px; }
+.dash-main { flex: 1 1 0; min-width: 0; max-width: 1400px; margin: 0 0 0 260px; padding: 2rem 24px; }
 [data-theme="dark"] .dash-topbar, [data-theme="dark"] .dash-sidebar { background: #102737; }
 [data-theme="dark"] .dash-sidebar .nav-link { color: var(--clr-dark); }
 
