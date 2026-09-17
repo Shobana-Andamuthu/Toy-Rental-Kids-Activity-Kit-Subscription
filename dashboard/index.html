@@ -97,7 +97,44 @@
         </div>
       </div>
 
-      <!-- Top Summary Metrics Cards -->
+      <!-- Visual Parent Workflow Status Bar -->
+      <div class="bg-white p-3 p-md-4 rounded-4 shadow-sm border border-light-cyan mb-4 w-100">
+        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+          <span class="badge bg-light-cyan text-secondary border border-light-cyan rounded-pill px-3 py-2 fw-bold">
+            <i class="bi bi-arrow-repeat me-1"></i> Current Parent Journey Cycle
+          </span>
+          <small class="text-muted fw-bold">Leo (Age 4) &bull; Play Plus Plan</small>
+        </div>
+        <div class="parent-journey-grid">
+          <div class="journey-step-card p-3">
+            <div class="journey-step-badge mb-2" style="width: 28px; height: 28px; font-size: 0.85rem;">1</div>
+            <strong class="d-block text-dark small fw-bold mb-1">Child Profile</strong>
+            <span class="badge bg-light text-primary border rounded-pill px-2 py-1 small fw-bold">Age 3–5 Yrs</span>
+          </div>
+          <div class="journey-step-card p-3">
+            <div class="journey-step-badge mb-2" style="width: 28px; height: 28px; font-size: 0.85rem;">2</div>
+            <strong class="d-block text-dark small fw-bold mb-1">Active Rentals</strong>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 small fw-bold">2 In Home</span>
+          </div>
+          <div class="journey-step-card p-3">
+            <div class="journey-step-badge mb-2" style="width: 28px; height: 28px; font-size: 0.85rem;">3</div>
+            <strong class="d-block text-dark small fw-bold mb-1">Swap Request</strong>
+            <span class="badge bg-primary text-white rounded-pill px-2 py-1 small fw-bold">1 Ready</span>
+          </div>
+          <div class="journey-step-card p-3">
+            <div class="journey-step-badge mb-2" style="width: 28px; height: 28px; font-size: 0.85rem;">4</div>
+            <strong class="d-block text-dark small fw-bold mb-1">Next Rotation</strong>
+            <span class="text-dark small fw-bold">Oct 15, 2026</span>
+          </div>
+          <div class="journey-step-card p-3">
+            <div class="journey-step-badge mb-2" style="width: 28px; height: 28px; font-size: 0.85rem;">5</div>
+            <strong class="d-block text-dark small fw-bold mb-1">Invoices & Billing</strong>
+            <span class="text-muted small">Auto-Renewed</span>
+          </div>
+        </div>
+      </div>
+
+
       <div class="row g-4 mb-4">
         <div class="col-md-6 col-xl-3">
           <div class="bg-white p-4 rounded-4 shadow-sm border border-light-cyan hover-lift">
@@ -155,29 +192,36 @@
 
             <div class="row g-3">
               <div class="col-md-6">
-                <div class="p-3 bg-light-blue rounded-3 border border-light-cyan d-flex align-items-center gap-3">
+                <div class="p-3 bg-light-blue rounded-3 border border-light-cyan d-flex align-items-center gap-3 my-toy-card">
                   <img src="../assets/images/dashboard/d-toy1.jpg" alt="Pastel Ring Stacker" class="rounded-3 object-fit-cover" style="width: 80px; height: 80px;">
-                  <div>
+                  <div class="my-toy-card-content flex-grow-1">
                     <span class="badge bg-primary text-white rounded-pill px-2 py-1 mb-1" style="font-size: 0.7rem;">Age 3–5 Yrs</span>
                     <h6 class="fw-bold text-dark mb-1">Pastel Ring Stacker</h6>
                     <small class="text-muted d-block mb-1">Delivered Sep 15, 2026</small>
-                    <small class="text-success fw-bold"><i class="bi bi-shield-check me-1"></i> Hospital Clean</small>
+                    <small class="text-success fw-bold d-block mb-2"><i class="bi bi-shield-check me-1"></i> Hospital Clean</small>
+                    <div class="my-toy-card-actions">
+                      <a href="swap.html?toy=1" class="btn btn-xs btn-outline-primary rounded-pill px-3 py-1 small fw-bold">Request Swap</a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="p-3 bg-light-blue rounded-3 border border-light-cyan d-flex align-items-center gap-3">
+                <div class="p-3 bg-light-blue rounded-3 border border-light-cyan d-flex align-items-center gap-3 my-toy-card">
                   <img src="../assets/images/dashboard/d-toy2.jpg" alt="Coding Robot" class="rounded-3 object-fit-cover" style="width: 80px; height: 80px;">
-                  <div>
+                  <div class="my-toy-card-content flex-grow-1">
                     <span class="badge bg-secondary text-white rounded-pill px-2 py-1 mb-1" style="font-size: 0.7rem;">Age 3–5 Yrs</span>
                     <h6 class="fw-bold text-dark mb-1">STEM Coding Companion</h6>
                     <small class="text-muted d-block mb-1">Delivered Sep 15, 2026</small>
-                    <small class="text-success fw-bold"><i class="bi bi-shield-check me-1"></i> Hospital Clean</small>
+                    <small class="text-success fw-bold d-block mb-2"><i class="bi bi-shield-check me-1"></i> Hospital Clean</small>
+                    <div class="my-toy-card-actions">
+                      <a href="swap.html?toy=2" class="btn btn-xs btn-outline-primary rounded-pill px-3 py-1 small fw-bold">Request Swap</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 

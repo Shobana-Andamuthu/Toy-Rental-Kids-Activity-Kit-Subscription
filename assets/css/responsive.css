@@ -3,9 +3,36 @@
    Breakpoints: 1400, 1200, 992, 768, 575, 480, 375
    ========================================================================== */
 
-/* -----------------------------------------------------------------------
-   Desktop Unified Container (Navbar & Contents Aligned at 1160px)
-   ----------------------------------------------------------------------- */
+/* Responsive Full Width Container (< 1200px) */
+@media (max-width: 1199.98px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl,
+  .nav-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl,
+  .nav-shell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Desktop Unified Container (Navbar & Contents Aligned at 1160px) */
 @media (min-width: 1200px) {
   .container,
   .container-lg,
@@ -18,6 +45,25 @@
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+}
+
+/* Universal Header Navbar & Menu Toggler Right Alignment */
+.site-header .nav-shell {
+  width: 100% !important;
+}
+
+.site-header .navbar,
+.site-header .navbar-inner {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.site-header .navbar-toggler {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 /* -----------------------------------------------------------------------
@@ -37,11 +83,18 @@
     --nav-height-scrolled: 64px;
   }
 
-  .nav-shell { padding: 0 20px; }
+  .nav-shell { padding: 0 20px; width: 100%; }
 
   .navbar-inner {
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: 0 !important;
   }
 
   .section-padding { padding: 4rem 0; }
@@ -312,4 +365,140 @@ img, video, iframe, embed, object {
 .row {
   max-width: none;
 }
+
+/* -----------------------------------------------------------------------
+   Dashboard Rentals Table & My Toys Responsive Card Rules
+   ----------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .responsive-table table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-table thead {
+    display: none !important;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: var(--clr-card-bg, #FFFFFF);
+    border: 1px solid var(--clr-card-border, #BAE6FD) !important;
+    border-radius: var(--radius-md, 20px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .responsive-table td {
+    padding: 0.6rem 0 !important;
+    border: none !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+  }
+
+  .responsive-table td[data-label]::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--clr-muted, #475569);
+    text-align: left;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  .responsive-table td:first-child {
+    display: block !important;
+    text-align: left !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--clr-border, #BAE6FD) !important;
+  }
+
+  .responsive-table td:first-child::before {
+    display: none !important;
+  }
+
+  .responsive-table td.text-end {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    margin-top: 0.5rem;
+  }
+
+  .responsive-table td.text-end .btn {
+    width: 100%;
+  }
+}
+
+/* My Toys / Rentals Stack for Small Mobile (320px - 480px) */
+@media (max-width: 575px) {
+  .my-toy-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .my-toy-card img {
+    width: 100% !important;
+    max-height: 160px !important;
+    border-radius: 12px !important;
+  }
+
+  .my-toy-card-content {
+    width: 100% !important;
+  }
+
+  .my-toy-card-actions {
+    width: 100% !important;
+    margin-top: 0.5rem;
+  }
+
+  .my-toy-card-actions .btn {
+    width: 100% !important;
+  }
+}
+
+/* Full-Width Age Tab Buttons across all viewports */
+#ageTabsContent .tab-pane .btn {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Equal Width Hero Action Buttons Across Desktop & Mobile */
+.hero-actions .btn {
+  min-width: 190px;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+@media (max-width: 575px) {
+  .hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .hero-actions .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+
 

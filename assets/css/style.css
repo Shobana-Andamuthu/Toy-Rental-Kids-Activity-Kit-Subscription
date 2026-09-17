@@ -89,20 +89,36 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   transition: background-color var(--transition-fast), color var(--transition-fast);
+  font-weight: 450;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Global Typography Standard (Rule 5 Enforced) */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.hero-title, .section-title h2 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 600 !important;
   color: var(--clr-dark);
+  line-height: 1.25;
   margin-bottom: 1rem;
 }
 
-p, .lead {
-  line-height: 1.7;
+p, .hero-subtitle, .card-desc, .journey-step-desc {
+  font-family: var(--font-body);
+  font-weight: 450;
+  line-height: 1.65;
   margin-bottom: 1.2rem;
-  font-size: 1.05rem;
+  font-size: 1.025rem;
   color: var(--clr-body);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: var(--clr-muted);
 }
 
 .text-muted {
@@ -112,6 +128,7 @@ p, .lead {
 .text-dark {
   color: var(--clr-dark) !important;
 }
+
 
 /* Global Consistent Container */
 .container,
@@ -517,17 +534,26 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
   background-color: rgba(11, 26, 41, 0.95);
 }
 
+.site-header .nav-shell {
+  width: 100% !important;
+}
+
+.site-header .navbar {
+  width: 100% !important;
+}
+
 .navbar-inner {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
+  display: flex !important;
+  width: 100% !important;
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+  justify-content: space-between !important;
   height: var(--nav-height);
   transition: height var(--transition-normal);
   padding: 0;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
 }
 
 .site-header.scrolled {
@@ -809,10 +835,18 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
   .nav-actions {
     display: none !important;
   }
+  .navbar-inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
   .navbar-toggler {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    margin-left: auto !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -1092,28 +1126,31 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
   padding-right: 20px;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 1199.98px) {
   .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl,
   .nav-shell {
-    max-width: 540px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 575.98px) {
   .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl,
   .nav-shell {
-    max-width: 720px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .container,
-  .nav-shell {
-    max-width: 960px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -1326,16 +1363,17 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
 .img-hover-zoom:hover { transform: scale(1.04); }
 
 /* Hero Section */
-.hero-section { overflow: hidden; position: relative; }
+.hero-section { overflow: hidden; position: relative; padding-bottom: 2rem; }
 .home-1-page main,
 .home-2-page main { padding-top: var(--nav-height); }
 .home-1-page .hero-section { min-height: auto; }
 @media (min-width: 1200px) and (max-height: 960px) {
   .home-1-page .hero-section { min-height: calc(100vh - var(--nav-height)); }
 }
-.hero-eyebrow { font-family: var(--font-heading); font-weight: 700; color: var(--clr-secondary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; font-size: 0.95rem; }
-.hero-title { font-size: clamp(2.3rem, 4.5vw, 4rem); line-height: 1.1; font-weight: 800; letter-spacing: -1px; word-break: break-word; overflow-wrap: break-word; }
-.hero-subtitle { font-size: 1.2rem; color: var(--clr-muted); max-width: 500px; margin-top: 1.5rem; line-height: 1.8; word-break: break-word; }
+.hero-eyebrow { font-family: var(--font-heading); font-weight: 600; color: var(--clr-secondary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.hero-title { font-size: clamp(2.3rem, 4.5vw, 4rem); line-height: 1.1; font-weight: 600 !important; letter-spacing: -1px; word-break: break-word; overflow-wrap: break-word; }
+.hero-subtitle { font-size: 1.2rem; color: var(--clr-muted); max-width: 500px; margin-top: 1.5rem; line-height: 1.7; font-weight: 450; word-break: break-word; }
+
 .hero-visual { position: relative; max-width: 100%; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
 .blob-shape { position: absolute; z-index: -1; filter: blur(50px); border-radius: 50%; opacity: 0.6; pointer-events: none; }
 .blob-1 { width: 320px; height: 320px; background: rgba(6,182,212,0.25); top: 5%; right: 5%; max-width: 100%; }
@@ -1350,8 +1388,9 @@ a.btn, a.btn:hover, a.btn:focus, a.btn:active {
 .avatar-sm:nth-child(3) { z-index: 1; }
 
 /* Trust Strip */
-.trust-strip { margin-top: -60px; position: relative; z-index: 10; padding: 0; }
+.trust-strip { margin-top: 1.5rem; position: relative; z-index: 10; padding: 0; }
 .trust-strip-inner { padding: 2.5rem 1rem; }
+
 .trust-item { padding: 1rem 2rem; }
 @media(min-width: 768px) { .border-end-md { border-right: 1px solid var(--clr-border); } }
 
@@ -3233,3 +3272,157 @@ img, video, iframe, embed, svg {
   50% { transform: translateX(0%); }
   100% { transform: translateX(100%); }
 }
+
+/* ==========================================================================
+   Client Correction Component Standards
+   ========================================================================== */
+
+/* 1. Circular Icon Container Standard */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: var(--transition-normal);
+}
+
+.icon-circle-lg {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 2rem;
+}
+
+.icon-circle-sm {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  font-size: 1.25rem;
+}
+
+/* 2. Standardized Internal Page Hero Section */
+.internal-hero,
+.about-hero,
+.catalog-hero,
+.contact-hero,
+.faq-hero,
+.how-hero,
+.hygiene-hero,
+.plans-hero,
+.login-hero,
+.register-hero,
+.product-hero {
+  padding: 3.75rem 0;
+  background-color: var(--clr-light);
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.internal-hero-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 3. Equal Height & Flexible Grid Cards */
+.what-kind-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.equal-height-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 4. Parent Journey Visual Flow Component */
+.parent-journey-wrapper {
+  padding: 2.5rem 0;
+}
+
+.parent-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.journey-step-card {
+  background: var(--clr-card-bg);
+  border: 1px solid var(--clr-card-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  height: 100%;
+}
+
+.journey-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.journey-step-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.journey-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: 0.5rem;
+}
+
+.journey-step-desc {
+  font-size: 0.88rem;
+  color: var(--clr-muted);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* 5. Catalog Card Age Badge & Structure Fix */
+.catalog-card-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-age-badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
